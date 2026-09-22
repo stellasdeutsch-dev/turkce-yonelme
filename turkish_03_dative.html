@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дательный падеж -a / -e в турецком · Alterna</title>
+<meta name="description" content="Кому, куда и к чему. Один турецкий суффикс вместо десятка русских предлогов. Разбор с тренажёром, картой и тестом. Гайд 03 из платформы Alterna A0 → C1.">
+<meta property="og:title" content="Дательный падеж -a / -e: кому, куда и к чему">
+<meta property="og:description" content="Один суффикс вместо десятка предлогов. Разбор с тренажёром и тестом. Alterna, школа турецкого.">
+<meta property="og:image" content="media/nt_cases.webp">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d1a26; --ink2:#3a3645; --muted:#737084; --line:#f0ebf3; --soft:#faf7fb;
+  --v1:#8a5cff; --v2:#b56cff; --violet:#9161ff;
+  --r1:#ff6d4b; --r2:#ff3d5f; --r3:#ef3a82; --red:#ff3b55;
+  --o1:#ff8330; --o2:#ff5512;
+  --b1:#4cc3f6; --b2:#249fe4;
+  --peach:#fff1ea; --pink:#ffe8f0; --lav:#f1eaff;
+  --radius:22px;
+  --shadow:0 18px 50px -24px rgba(70,20,90,.22);
+  --redgrad:linear-gradient(158deg,var(--r1) 0%,var(--r2) 48%,var(--r3) 100%);
+  --orgrad:linear-gradient(180deg,var(--o1),var(--o2));
+  --bgrad:linear-gradient(180deg,var(--b1),var(--b2));
+  --vgrad:linear-gradient(90deg,var(--v1),var(--v2));
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.5;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,video,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+a{color:inherit;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+section{position:relative}
+.sec{padding:64px 0}
+.v{background:var(--vgrad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+.r{color:var(--red);font-weight:700}
+b,strong{font-weight:700}
+.muted{color:var(--muted)}
+.kicker{display:inline-flex;align-items:center;gap:8px;color:var(--red);font-weight:700;font-size:12.5px;letter-spacing:.01em;margin-bottom:14px}
+.kicker::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(255,59,85,.15)}
+h1,h2,h3{font-weight:400;letter-spacing:-.035em;line-height:1.04}
+h1{font-size:clamp(36px,10.4vw,68px)}
+h2{font-size:clamp(29px,7.6vw,46px);margin-bottom:14px}
+h3{font-size:21px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.lead{font-size:16.5px;color:var(--ink2);max-width:640px}
+.lead+.lead{margin-top:10px}
+p+p{margin-top:10px}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.75;pointer-events:none;z-index:-1}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:12px;font-weight:700;font-size:15px;text-decoration:none;color:#fff;overflow:hidden;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.btn:active{transform:scale(.97)}
+.btn-o{background:var(--orgrad);box-shadow:0 14px 30px -10px rgba(255,85,18,.6),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-b{background:var(--bgrad);box-shadow:0 14px 30px -10px rgba(36,159,228,.55),inset 0 1px 0 rgba(255,255,255,.35)}
+.btn-w{background:#fff;color:var(--ink);box-shadow:0 10px 26px -12px rgba(0,0,0,.25)}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 4.5s infinite}
+.btn-w::after{display:none}
+@keyframes shine{0%,70%{left:-60%}100%{left:130%}}
+@media (hover:hover){.btn:hover{transform:translateY(-3px)}.btn-o:hover{box-shadow:0 20px 36px -10px rgba(255,85,18,.7)}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btns .btn{flex:1 1 200px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
+
+/* progress */
+#prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--r2),var(--v1));z-index:60}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;padding:10px 0;transition:background .3s,box-shadow .3s}
+.hdr.stuck{background:rgba(255,255,255,.86);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);box-shadow:0 1px 0 var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:14px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.logo .mk{width:34px;height:34px;flex:none}
+.logo b{font-size:17px;font-weight:800;letter-spacing:-.03em;display:block;line-height:1}
+.logo small{display:block;font-size:10.5px;color:var(--muted);letter-spacing:.02em;margin-top:2px}
+.nav{display:none;gap:22px;margin-left:auto;font-size:13.5px;color:var(--muted)}
+.nav a{text-decoration:none;transition:color .2s}.nav a:hover{color:var(--ink)}
+.hdr .geo{display:none;font-size:12px;color:var(--muted);line-height:1.3}
+.hdr .btn{min-height:40px;padding:0 16px;font-size:13px;border-radius:10px;margin-left:auto}
+@media(min-width:900px){.nav{display:flex}.hdr .btn{margin-left:0}.hdr .geo{display:block}}
+
+/* hero */
+.hero{padding:18px 0 40px;overflow:hidden}
+.hero .grid{display:grid;gap:10px}
+.hero h1 .pill{display:inline-block;margin-top:10px;font-size:.42em;letter-spacing:-.01em;font-weight:600;color:#fff;background:var(--redgrad);padding:.38em .9em .45em;border-radius:999px;box-shadow:0 16px 30px -12px rgba(255,61,95,.6);position:relative;vertical-align:middle}
+.hero h1 .pill::before,.hero h1 .pill::after{content:"";position:absolute;width:12px;height:3px;background:var(--red);border-radius:2px}
+.hero h1 .pill::before{left:-16px;top:6px;transform:rotate(35deg)}
+.hero h1 .pill::after{right:-16px;bottom:8px;transform:rotate(35deg)}
+.hero .sub{font-size:17px;color:var(--ink2);margin-top:18px;max-width:520px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.meta span{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;box-shadow:0 6px 16px -10px rgba(0,0,0,.15)}
+.meta i{width:7px;height:7px;border-radius:50%;background:var(--v1);display:block}
+.hvis{position:relative;aspect-ratio:1/1;max-width:560px;width:100%;margin:10px auto 0}
+.box{position:absolute;border-radius:16px;display:flex;flex-direction:column;justify-content:flex-end;padding:12px 14px;color:#fff;box-shadow:0 30px 40px -24px rgba(40,10,50,.55);will-change:transform;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.box::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 45%);pointer-events:none}
+.box .w{font-size:clamp(17px,4.6vw,26px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+.box .w .sx{color:#fff;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:4px}
+.box .t{font-size:11px;opacity:.85;margin-top:3px}
+.box .tag{position:absolute;top:10px;left:12px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.bx1{width:40%;aspect-ratio:1.05;left:28%;top:6%;background:linear-gradient(150deg,#3fd6c4,#16a5a5);--r:-10deg}
+.bx2{width:40%;aspect-ratio:1.1;left:4%;top:40%;background:linear-gradient(150deg,#a2244e,#5e1030);--r:12deg}
+.bx2 .w{font-family:Georgia,serif;font-style:italic;font-weight:400}
+.bx3{width:36%;aspect-ratio:.95;left:58%;top:34%;background:linear-gradient(150deg,#e45bd4,#9a2bc3);--r:-6deg}
+.bx4{width:34%;aspect-ratio:1.05;left:14%;top:72%;background:linear-gradient(160deg,#fff7ea,#f6e5d4);color:#4b2a2a;--r:-4deg}
+.bx4 .tag{color:#c0484f}
+.bx5{width:37%;aspect-ratio:1.15;left:52%;top:70%;background:linear-gradient(150deg,#7b6cff,#3c2dc4);--r:5deg}
+.box{transform:rotate(var(--r)) translate3d(var(--px,0),var(--py,0),0)}
+.float{animation:flt 6s ease-in-out infinite}
+.float.f2{animation-duration:7.5s;animation-delay:-2s}.float.f3{animation-duration:8.5s;animation-delay:-4s}
+@keyframes flt{0%,100%{translate:0 0}50%{translate:0 -10px}}
+.kedi-h{position:absolute;width:44%;left:56%;top:-2%;filter:drop-shadow(0 24px 22px rgba(60,20,80,.25))}
+.ic{position:absolute;filter:drop-shadow(0 12px 14px rgba(255,59,85,.35))}
+.ic-bolt{width:13%;left:16%;top:12%}
+.ic-heart{width:15%;right:0;top:48%}
+.ic-star{width:9%;left:1%;top:28%;filter:none}
+@media(min-width:900px){
+  .hero{padding:30px 0 70px}
+  .hero .grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:30px}
+  .hvis{margin:0}
+}
+
+/* cards */
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
+.rcard{background:var(--redgrad);color:#fff;border-radius:26px;padding:26px 22px;box-shadow:0 34px 60px -28px rgba(255,61,95,.7);position:relative;overflow:hidden}
+.rcard::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%);right:-90px;top:-110px}
+.rcard h3{font-size:17px;margin-bottom:16px}
+.chk{list-style:none;display:grid;gap:13px}
+.chk li{display:grid;grid-template-columns:22px 1fr;gap:12px;font-size:14px;line-height:1.4}
+.chk li::before{content:"";width:22px;height:22px;border-radius:6px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23ff3d5f' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;margin-top:-1px}
+.chk.red li::before{background-color:var(--red);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.chk li span{opacity:.92}
+.rpill{display:inline-flex;align-items:center;justify-content:center;background:var(--redgrad);color:#fff;font-weight:700;font-size:14px;border-radius:999px;padding:11px 24px;box-shadow:0 14px 26px -10px rgba(255,61,95,.65)}
+
+/* examples */
+.exs{display:grid;gap:10px;margin-top:22px}
+.ex{display:grid;grid-template-columns:1fr 38px;align-items:center;gap:8px;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px 12px 13px 16px;box-shadow:0 8px 24px -18px rgba(60,20,80,.35);transition:transform .2s,border-color .2s,box-shadow .2s}
+.ex:active{transform:scale(.985)}
+@media(hover:hover){.ex:hover{border-color:#e7dcff;box-shadow:0 14px 30px -18px rgba(138,92,255,.45)}}
+.ex .tr{font-weight:700;font-size:17px;letter-spacing:-.01em;display:block}
+.ex .ru{font-size:13.5px;color:var(--muted);display:block;margin-top:1px}
+.ex .spk{width:38px;height:38px;border-radius:12px;background:var(--lav);display:grid;place-items:center;color:var(--v1)}
+.ex.playing .spk{background:var(--v1);color:#fff;animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(138,92,255,.45)}50%{box-shadow:0 0 0 8px rgba(138,92,255,0)}}
+.sx{color:var(--red);font-weight:800}
+.bf{color:var(--v1);font-weight:800;font-style:normal}
+.ac{color:#1e9be0;font-weight:800}
+@media(min-width:760px){.exs.two{grid-template-columns:1fr 1fr}}
+
+/* section head number */
+.num{font-size:13px;font-weight:800;color:var(--v1);background:var(--lav);border-radius:10px;padding:5px 10px;display:inline-block;margin-bottom:14px;letter-spacing:.04em}
+.note{margin-top:18px;background:var(--soft);border:1px dashed #e2d6f2;border-radius:16px;padding:14px 16px;font-size:14.5px;color:var(--ink2)}
+.note b{color:var(--ink)}
+.bad{margin-top:14px;display:flex;gap:12px;align-items:flex-start;background:#fff3f4;border-radius:16px;padding:14px 16px;font-size:14.5px;color:#5a2a33}
+.bad .x{flex:none;width:24px;height:24px;border-radius:7px;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+
+/* stats trio */
+.trio{display:grid;gap:40px;margin-top:34px}
+.tcard{text-align:center}
+.tcard .img{position:relative;height:190px;border-radius:22px;background:linear-gradient(160deg,#fff4ef,#ffe6ef);display:grid;place-items:center;overflow:visible}
+.tcard .img .big{font-size:44px;font-weight:800;letter-spacing:-.04em;color:var(--ink)}
+.tcard .img .rpill{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.tcard .img svg.deco{position:absolute}
+.tcard p{margin-top:34px;font-size:14.5px;color:var(--muted);max-width:300px;margin-left:auto;margin-right:auto}
+.tcard p b{color:var(--v1);font-weight:600;display:block;font-size:15.5px}
+@media(min-width:800px){.trio{grid-template-columns:repeat(3,1fr);gap:26px}}
+
+/* arrow scene */
+.arrowscene{margin-top:26px;border-radius:24px;background:linear-gradient(160deg,#faf6ff,#fff3ee);padding:18px;overflow:hidden}
+.arrowscene svg{width:100%;height:auto}
+.arrowscene .path{stroke-dasharray:520;stroke-dashoffset:520;transition:stroke-dashoffset 1.8s cubic-bezier(.6,.1,.2,1)}
+.arrowscene.in .path{stroke-dashoffset:0}
+.arrowscene .head{opacity:0;transition:opacity .3s 1.6s}
+.arrowscene.in .head{opacity:1}
+
+/* calc section (точная стоимость) */
+.calc3{display:grid;gap:30px;margin-top:30px;align-items:center}
+.calc3 .side{text-align:center}
+.calc3 .side p{font-size:14.5px;color:var(--ink2);margin-top:14px}
+.calc3 .side p .v{font-weight:600}
+.calc3 .side .btn{margin-top:18px;width:100%;max-width:280px}
+.receipt{background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:18px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;max-width:280px;margin:0 auto;position:relative;transform:rotate(3deg)}
+.receipt::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:12px;background:radial-gradient(circle at 8px -2px,transparent 8px,#fff 8.5px) repeat-x;background-size:16px 12px}
+.receipt .rl{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px dashed #eee}
+.receipt .rl:last-child{border:0;font-weight:800;font-size:15px;padding-top:9px}
+.receipt .rh{text-align:center;font-weight:800;letter-spacing:.1em;margin-bottom:8px;color:var(--red)}
+@media(min-width:900px){.calc3{grid-template-columns:1fr 1.15fr 1fr}}
+
+/* LAB */
+.lab{border-radius:28px;background:#16131f;color:#fff;padding:22px 16px;box-shadow:0 40px 80px -40px rgba(30,10,60,.7);position:relative;overflow:hidden}
+.lab::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(138,92,255,.35),transparent 65%);right:-160px;top:-160px;pointer-events:none}
+.lab h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#b9a6ff;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:9px 13px;border-radius:11px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);font-weight:700;font-size:14px;transition:background .2s,transform .2s}
+.chip small{font-weight:500;opacity:.55;margin-left:5px;font-size:11.5px}
+.chip:active{transform:scale(.95)}
+.chip.on{background:var(--vgrad);border-color:transparent;box-shadow:0 10px 22px -10px rgba(138,92,255,.8)}
+.inrow{display:flex;gap:8px;margin-top:14px}
+.inrow input{flex:1;min-width:0;height:50px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:16px;font-weight:600;padding:0 14px;outline:none}
+.inrow input:focus{border-color:var(--v2);box-shadow:0 0 0 4px rgba(181,108,255,.25)}
+.inrow .btn{min-height:50px;padding:0 18px}
+.tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:28px 0 8px;min-height:64px}
+.tile{width:44px;height:58px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:26px;font-weight:800;transition:all .45s cubic-bezier(.2,.8,.2,1);position:relative}
+.tile.lv{background:#fff;color:var(--ink);box-shadow:0 0 0 3px var(--v2),0 12px 24px -10px rgba(181,108,255,.9)}
+.tile.lv::after{content:"последняя гласная";position:absolute;top:-22px;font-size:9.5px;font-weight:700;color:#cbb8ff;white-space:nowrap;letter-spacing:.02em}
+.tile.soft{background:#ffd23f;color:#3b2a00}
+.tile.add{animation:pop .5s cubic-bezier(.2,1.4,.4,1) both}
+.tile.buf{background:var(--vgrad)}
+.tile.suf{background:var(--redgrad)}
+.tile.apo{width:22px;background:transparent}
+@keyframes pop{from{transform:translateY(-30px) scale(.4);opacity:0}}
+.result{text-align:center;margin-top:10px}
+.result .big{font-size:clamp(34px,10vw,54px);font-weight:800;letter-spacing:-.03em}
+.result .tr{color:#b9b4c8;font-size:15px}
+.steps{display:grid;gap:10px;margin-top:22px}
+.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;padding:12px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);opacity:.35;transform:translateX(-6px);transition:all .45s}
+.step.on{opacity:1;transform:none;background:rgba(255,255,255,.07)}
+.step .n{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.1);display:grid;place-items:center;font-weight:800;font-size:14px}
+.step.on .n{background:var(--vgrad)}
+.step b{display:block;font-size:14.5px}
+.step span{font-size:13.5px;color:#c9c4d6}
+.lab .warn{font-size:12.5px;color:#a9a3b8;margin-top:16px}
+.lab .err{color:#ff9aa9;text-align:center;font-weight:600;margin-top:10px;min-height:20px;font-size:14px}
+@media(min-width:900px){.lab{padding:34px}.labgrid{display:grid;grid-template-columns:1fr 1fr;gap:34px}.steps{margin-top:0}}
+
+/* segmented tabs */
+.seg{display:flex;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:5px;gap:4px;margin-top:22px}
+.seg button{flex:1;padding:11px 6px;border-radius:10px;font-weight:700;font-size:14px;color:var(--muted);transition:all .25s}
+.seg button small{display:block;font-size:11.5px;font-weight:600;opacity:.8}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:0 8px 18px -10px rgba(60,20,80,.35)}
+.seg button.on small{color:var(--red)}
+.scene{margin-top:14px;border-radius:22px;background:linear-gradient(170deg,#f5f0ff,#fff4ef);padding:14px;overflow:hidden}
+.scene svg{width:100%;height:auto}
+#walker{transition:transform 1.1s cubic-bezier(.5,0,.2,1),opacity .6s}
+.scene .cap{text-align:center;margin-top:6px}
+.scene .cap .tr{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.scene .cap .ru{color:var(--muted);font-size:14px}
+.geo3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.geo3 div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center}
+.geo3 b{display:block;font-size:17px}
+.geo3 div>span{font-size:12px;color:var(--muted)}
+
+/* flip cards */
+.flips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.flip{perspective:800px;height:104px;display:block;width:100%}
+.flip .fi{display:block;position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.3,1.3,.4,1);transform-style:preserve-3d}
+.flip.on .fi{transform:rotateY(180deg)}
+.flip .f,.flip .bk{position:absolute;inset:0;border-radius:18px;display:grid;place-items:center;align-content:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip .f{background:#fff;border:1px solid var(--line);box-shadow:0 10px 24px -16px rgba(60,20,80,.4)}
+.flip .f b{font-size:22px}
+.flip .f span{font-size:11px;color:var(--muted)}
+.flip .bk{background:var(--redgrad);color:#fff;transform:rotateY(180deg);box-shadow:0 14px 26px -12px rgba(255,61,95,.6)}
+.flip .bk b{font-size:24px}
+.flip .bk span{font-size:11.5px;opacity:.9}
+.flipall{margin-top:12px;font-size:13px;font-weight:700;color:var(--v1)}
+@media(min-width:760px){.flips{grid-template-columns:repeat(6,1fr)}}
+
+/* bosses */
+.bosses{display:grid;gap:10px;margin-top:22px}
+.boss{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:0 8px 22px -18px rgba(60,20,80,.4)}
+.boss .ico{flex:none;width:42px;height:42px;border-radius:12px;background:var(--redgrad);display:grid;place-items:center;color:#fff;font-weight:800;font-size:20px;box-shadow:0 10px 18px -10px rgba(255,61,95,.7)}
+.boss b{display:block;font-size:16px}
+.boss span{font-size:13.5px;color:var(--muted)}
+@media(min-width:760px){.bosses{grid-template-columns:1fr 1fr}}
+
+/* versus */
+.vs{margin-top:22px;display:grid;gap:14px}
+.vsbox{border-radius:22px;padding:20px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.vstog{display:flex;gap:6px;background:var(--soft);border-radius:12px;padding:4px;margin-bottom:16px}
+.vstog button{flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:13.5px;color:var(--muted);transition:all .25s}
+.vstog button.on{background:#fff;color:var(--ink);box-shadow:0 6px 16px -10px rgba(0,0,0,.3)}
+.vsout{min-height:120px;display:grid;place-items:center;text-align:center}
+.vsout .tr{font-size:clamp(24px,7vw,32px);font-weight:800;letter-spacing:-.02em}
+.vsout .ru{color:var(--muted)}
+.vsout .why{margin-top:10px;font-size:14px;background:var(--soft);border-radius:12px;padding:10px 14px;color:var(--ink2)}
+.vsout>div{animation:fadeup .45s both}
+@keyframes fadeup{from{opacity:0;transform:translateY(10px)}}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14.5px;margin-top:6px}
+.tbl th{text-align:left;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;padding:8px 10px}
+.tbl td{padding:12px 10px;border-top:1px solid var(--line)}
+.tbl td:first-child{font-weight:700}
+.tag-d,.tag-a{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}
+.tag-d{background:#ffe7ea;color:var(--red)}
+.tag-a{background:#e3f4fd;color:#1e8fd0}
+@media(min-width:900px){.vs{grid-template-columns:1fr 1fr}}
+
+/* softening cards */
+.softs{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 16px 26px;margin:22px -16px 0;scrollbar-width:none}
+.softs::-webkit-scrollbar{display:none}
+.sc{flex:0 0 78%;scroll-snap-align:center}
+.sc .ph{position:relative;height:170px;border-radius:20px;overflow:visible;display:grid;place-items:center}
+.sc .ph .pkg{width:62%;height:66%;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:22px;letter-spacing:-.02em;transform:rotate(-8deg);box-shadow:14px 14px 0 rgba(0,0,0,.12),0 24px 30px -16px rgba(0,0,0,.4);transition:transform .4s}
+.sc:hover .pkg{transform:rotate(-2deg) scale(1.04)}
+.sc .ph .rpill{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.sc .chk{margin-top:36px;padding:0 4px}
+.sc .chk li{font-size:14px;color:var(--ink2)}
+@media(min-width:900px){.softs{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible;margin:22px 0 0;padding:10px 0 0}.sc{flex:auto}}
+
+/* chain */
+.chain{margin-top:24px;border-radius:24px;background:linear-gradient(160deg,#fbf8ff,#fff4f1);padding:26px 14px;text-align:center}
+.cars{display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;gap:0;min-height:74px}
+.car{padding:14px 12px;border-radius:14px;font-weight:800;font-size:clamp(17px,4.8vw,24px);color:#fff;box-shadow:0 12px 22px -12px rgba(0,0,0,.35);transition:all .6s cubic-bezier(.3,1.3,.4,1)}
+.car small{display:block;font-size:10px;font-weight:600;opacity:.85;margin-top:2px}
+.car.c1{background:linear-gradient(150deg,#3b3452,#1d1a26)}
+.car.c2{background:linear-gradient(150deg,#3fd6c4,#16a5a5)}
+.car.c3{background:var(--vgrad)}
+.car.c4{background:var(--redgrad)}
+.cars .plus{font-weight:800;color:var(--muted);width:18px;transition:all .5s}
+.chain.joined .plus{width:0;opacity:0}
+.chain.joined .car{border-radius:0;box-shadow:none}
+.chain.joined .car.c1{border-radius:14px 0 0 14px}
+.chain.joined .car.c4{border-radius:0 14px 14px 0}
+.chain .res{margin-top:16px;font-size:15px;color:var(--muted);min-height:24px}
+.chain .res b{color:var(--ink);font-size:20px}
+.chain .btn{margin-top:14px}
+
+/* chat */
+.chat{margin-top:22px;border-radius:24px;background:#f6f3fa;padding:18px 14px;display:grid;gap:10px}
+.bub{max-width:82%;padding:11px 15px;border-radius:18px;font-size:15.5px;opacity:0;transform:translateY(10px) scale(.96);transition:all .45s cubic-bezier(.2,1.2,.4,1)}
+.bub.show{opacity:1;transform:none}
+.bub small{display:block;font-size:12px;opacity:.7}
+.bub.l{background:#fff;border-bottom-left-radius:6px;box-shadow:0 6px 16px -12px rgba(0,0,0,.3)}
+.bub.r{background:var(--vgrad);color:#fff;margin-left:auto;border-bottom-right-radius:6px}
+.bub.r .sx{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.qw{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.qw div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 6px;text-align:center}
+.qw b{display:block;font-size:17px}
+.qw div>span{font-size:12px;color:var(--muted)}
+
+/* delivery banner */
+.banner{border-radius:28px;background:var(--redgrad);color:#fff;padding:26px 20px 0;overflow:hidden;position:relative;box-shadow:0 34px 60px -30px rgba(255,61,95,.75)}
+.banner h2{font-weight:500;color:#fff}
+.banner h2 b{font-weight:800}
+.lines{display:grid;gap:8px;margin-top:18px;position:relative;z-index:2}
+.line{display:flex;align-items:center;gap:12px;text-align:left;width:100%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:12px 14px;color:#fff;transition:background .25s}
+.line .t{font-weight:700;font-size:16px}
+.line .ru{display:block;font-size:13px;opacity:0;max-height:0;transition:all .35s}
+.line.on{background:#fff;color:var(--ink)}
+.line.on .ru{opacity:.75;max-height:40px;margin-top:2px}
+.line .sx{color:#fff;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.line.on .sx{color:var(--red)}
+.line .ck{margin-left:auto;flex:none;width:22px;height:22px;border-radius:7px;background:rgba(255,255,255,.25)}
+.line.on .ck{background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.bus{position:relative;height:170px;margin-top:10px}
+.bus .kedi{position:absolute;width:150px;left:-6px;bottom:-30px;z-index:1}
+.bus .van{position:absolute;width:250px;right:-30px;bottom:-4px;animation:drive 5s ease-in-out infinite}
+@keyframes drive{0%,100%{transform:translateX(0)}50%{transform:translateX(-12px)}}
+.banner .badge{display:inline-block;font-size:11px;background:rgba(255,255,255,.2);border-radius:999px;padding:5px 11px;font-weight:700;margin-bottom:12px}
+.carriers{display:grid;gap:22px;margin-top:30px}
+.sfx{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sfx span{font-weight:800;font-size:clamp(22px,6vw,30px);letter-spacing:-.03em;color:#2a2733;font-style:italic}
+.sfx span:nth-child(odd){color:#9b98a8}
+@media(min-width:900px){.banner{padding:40px 40px 0}.bgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:end}.bus{height:280px}.bus .kedi{width:210px}.bus .van{width:330px}.carriers{grid-template-columns:1fr 1fr;align-items:start}}
+
+/* map */
+.map{position:relative;margin-top:24px;border-radius:26px;overflow:hidden;background:#f3f1f6;box-shadow:var(--shadow);height:460px}
+.map svg.bg{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:7px;background:#fff;border-radius:999px;padding:5px 12px 5px 5px;box-shadow:0 10px 24px -10px rgba(60,20,80,.4);font-weight:700;font-size:13px;white-space:nowrap;transition:transform .3s cubic-bezier(.2,1.3,.4,1),box-shadow .3s;z-index:2}
+.pin i{width:26px;height:26px;border-radius:50%;background:var(--redgrad);display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px;line-height:1;box-shadow:0 0 0 0 rgba(255,59,85,.5);animation:ping 2.4s infinite}
+.pin.on{transform:translate(-50%,-50%) scale(1.12);z-index:3;box-shadow:0 16px 30px -10px rgba(255,59,85,.55)}
+.pin.on i{background:var(--vgrad);animation:none}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,59,85,.45)}70%,100%{box-shadow:0 0 0 12px rgba(255,59,85,0)}}
+.mapcard{position:absolute;left:12px;right:12px;bottom:12px;background:#fff;border-radius:20px;padding:16px;box-shadow:0 20px 40px -18px rgba(40,10,60,.4);z-index:4;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+.mapcard .k{font-size:11.5px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.06em}
+.mapcard .tr{font-size:19px;font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-top:2px}
+.mapcard .ru{color:var(--muted);font-size:13.5px}
+.mapcard .spk{width:46px;height:46px;border-radius:14px;background:var(--lav);display:grid;place-items:center;color:var(--v1)}
+.mapcard.flash{animation:fadeup .4s both}
+#route{stroke-dasharray:8 10;animation:dash 30s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-600}}
+@media(min-width:900px){.map{height:560px}.mapcard{left:auto;right:24px;bottom:24px;width:380px}}
+
+/* quiz */
+.quiz{margin-top:24px;border-radius:26px;background:#fff;box-shadow:var(--shadow);border:1px solid var(--line);padding:20px 16px;position:relative;overflow:hidden}
+.qtop{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:var(--muted)}
+.qbar{height:6px;border-radius:6px;background:var(--line);margin:10px 0 18px;overflow:hidden}
+.qbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--r2),var(--v1));transition:width .5s}
+.qq{font-size:13px;color:var(--muted);font-weight:600}
+.qru{font-size:clamp(22px,6.4vw,30px);font-weight:700;letter-spacing:-.02em;line-height:1.15;margin:4px 0 16px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;padding:15px 16px;border-radius:14px;border:1.5px solid var(--line);background:var(--soft);font-weight:700;font-size:16.5px;transition:all .25s}
+@media(hover:hover){.opt:hover{border-color:#d9c8ff;background:#fff}}
+.opt.ok{border-color:#22c55e;background:#effdf3;color:#136b33}
+.opt.no{border-color:var(--red);background:#fff1f3;color:#9b1c33;animation:shake .4s}
+.opt[disabled]{cursor:default}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.fb{margin-top:14px;font-size:14.5px;border-radius:14px;padding:12px 14px;display:none}
+.fb.show{display:block;animation:fadeup .35s both}
+.fb.ok{background:#effdf3;color:#136b33}
+.fb.no{background:#fff1f3;color:#7e1f31}
+.qnext{margin-top:16px;width:100%}
+.qdone{text-align:center;padding:10px 0}
+.qdone .score{font-size:64px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.qdone .score small{font-size:24px;color:var(--muted)}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:70}
+
+/* cheatsheet */
+.cheat{margin-top:24px;border-radius:26px;background:#16131f;color:#fff;padding:22px;box-shadow:0 30px 60px -30px rgba(20,10,40,.7)}
+.cheat .row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:15px}
+.cheat .row:last-of-type{border:0}
+.cheat .row b{font-size:17px}
+.cheat .row span{color:#b5b0c4;text-align:right}
+.cheat .sx{color:#ff7d8f}
+.cheat .rule{margin-top:14px;border-radius:14px;background:rgba(255,255,255,.07);padding:14px;font-size:14.5px;color:#e7e3f0}
+.cheat .btn{margin-top:16px;width:100%}
+
+/* ===== AD ===== */
+.ad{background:linear-gradient(180deg,#fff 0%,#fff6f2 30%,#fbf4ff 70%,#fff 100%);overflow:hidden}
+.dots{display:grid;grid-template-columns:repeat(16,1fr);gap:5px;margin-top:22px;max-width:520px}
+.dots i{aspect-ratio:1;border-radius:50%;background:#ece6f2;transition:background .4s}
+.dots i.done{background:var(--orgrad);box-shadow:0 0 0 4px rgba(255,85,18,.2);animation:pulse2 1.6s infinite}
+@keyframes pulse2{50%{box-shadow:0 0 0 8px rgba(255,85,18,0)}}
+.dotcap{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:13px;color:var(--muted);font-weight:600}
+.dotcap b{color:var(--ink)}
+.proof{margin-top:26px;display:grid;gap:14px;align-items:center}
+.shot{border-radius:18px;overflow:hidden;box-shadow:0 26px 50px -26px rgba(40,10,60,.45);border:1px solid var(--line);background:#fff}
+.shot .bar{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);align-items:center;font-size:11.5px;color:var(--muted);font-weight:600}
+.shot .bar i{width:9px;height:9px;border-radius:50%;background:#ff5f57}
+.shot .bar i:nth-child(2){background:#febc2e}.shot .bar i:nth-child(3){background:#28c840;margin-right:6px}
+.shot img{width:100%;height:auto}
+.hl{position:relative}
+.hl .ring{position:absolute;left:3%;right:3%;top:44.5%;height:10.5%;border:3px solid var(--red);border-radius:12px;box-shadow:0 0 0 6px rgba(255,59,85,.15);animation:ring 2s infinite}
+@keyframes ring{50%{box-shadow:0 0 0 12px rgba(255,59,85,0)}}
+@media(min-width:900px){.proof{grid-template-columns:1fr 1.1fr;gap:34px}}
+
+.phero{display:grid;gap:26px;margin-top:10px}
+.feat{display:grid;gap:12px;margin-top:26px}
+.fc{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:#fff;border-radius:20px;padding:16px;border:1px solid var(--line);box-shadow:0 12px 30px -22px rgba(60,20,80,.45)}
+.fc .n{font-size:34px;font-weight:800;letter-spacing:-.04em;min-width:86px;background:var(--vgrad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.fc b{display:block;font-size:15.5px}
+.fc span{font-size:13.5px;color:var(--muted)}
+.fc.big{background:var(--redgrad);color:#fff;border:0;box-shadow:0 26px 44px -24px rgba(255,61,95,.8)}
+.fc.big .n{background:none;color:#fff;-webkit-text-fill-color:#fff}
+.fc.big span{color:rgba(255,255,255,.85)}
+@media(min-width:760px){.feat{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.feat{grid-template-columns:1fr 1fr 1fr}}
+
+.lvl{margin-top:30px;border-radius:26px;background:#fff;box-shadow:var(--shadow);border:1px solid var(--line);padding:20px 16px}
+.lvl .seg{margin-top:12px}
+.lvlout{margin-top:16px;min-height:120px}
+.lvlout>div{animation:fadeup .4s both}
+.lvlout .chk li{color:var(--ink2)}
+
+.route{display:grid;gap:10px;margin-top:22px}
+.stn{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 10px 24px -20px rgba(60,20,80,.5)}
+.stn .lv{width:48px;height:48px;border-radius:14px;background:var(--vgrad);color:#fff;display:grid;place-items:center;font-weight:800;font-size:13px}
+.stn b{display:block}
+.stn span{font-size:13.5px;color:var(--muted)}
+@media(min-width:900px){.route{grid-template-columns:repeat(4,1fr)}.stn{grid-template-columns:1fr}}
+
+.phones{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 16px 28px;margin:14px -16px 0;scrollbar-width:none}
+.phones::-webkit-scrollbar{display:none}
+.phone{flex:0 0 58%;max-width:250px;scroll-snap-align:center;text-align:center}
+.phone .fr{border-radius:34px;padding:8px;background:#1a1722;box-shadow:0 30px 50px -26px rgba(30,10,50,.6);position:relative}
+.phone .fr::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:34%;height:16px;border-radius:10px;background:#1a1722;z-index:2}
+.phone .fr img{border-radius:27px;width:100%;aspect-ratio:1170/2322;object-fit:cover;object-position:top;background:#f5f5f7}
+.phone b{display:block;margin-top:14px;font-size:14.5px}
+.phone span{font-size:12.5px;color:var(--muted)}
+@media(min-width:900px){.phone{flex-basis:23%}}
+.pdots{display:flex;justify-content:center;gap:6px}
+.pdots i{width:7px;height:7px;border-radius:4px;background:#e2dbe9;transition:all .3s}
+.pdots i.on{width:22px;background:var(--v1)}
+
+.lap{margin-top:26px}
+.lap .chips{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+.lap .chips::-webkit-scrollbar{display:none}
+.lap .chip{background:#fff;border:1px solid var(--line);color:var(--ink2);white-space:nowrap}
+.lap .chip.on{color:#fff;background:var(--vgrad);border-color:transparent}
+.lap .shot{margin-top:12px}
+.lap video{width:100%;aspect-ratio:1920/912;background:#f2eff6;object-fit:cover}
+.lap .cap{font-size:13.5px;color:var(--muted);margin-top:10px}
+
+.timer{margin-top:24px;border-radius:26px;background:#16131f;color:#fff;padding:24px 18px;position:relative;overflow:hidden}
+.timer::before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(255,85,18,.35),transparent 65%);left:-140px;bottom:-180px}
+.timer label{font-size:15px;color:#d5d0e0;display:block}
+.timer input[type=range]{width:100%;margin:18px 0 6px;accent-color:#ff6a1f;height:30px}
+.timer .mins{font-weight:800;color:#ffb089}
+.tout{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;position:relative}
+.tout div{background:rgba(255,255,255,.07);border-radius:16px;padding:14px}
+.tout b{display:block;font-size:clamp(28px,8vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.tout span{font-size:12.5px;color:#b9b4c8}
+.timer .punch{margin-top:14px;font-size:15px;color:#e7e3f0;position:relative}
+
+.author{display:grid;gap:18px;margin-top:24px;align-items:stretch}
+.acard{border-radius:26px;background:#fff;box-shadow:var(--shadow);border:1px solid var(--line);padding:22px;text-align:center}
+.ava{width:120px;height:120px;border-radius:50%;margin:0 auto;background:var(--redgrad);display:grid;place-items:center;color:#fff;font-size:40px;font-weight:800;letter-spacing:-.03em;box-shadow:0 0 0 6px #fff,0 0 0 8px #ffd9df,0 24px 40px -18px rgba(255,61,95,.7);position:relative}
+.ava::after{content:"";position:absolute;right:2px;bottom:8px;width:30px;height:30px;border-radius:50%;background:#e30a17 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Ccircle cx='12.5' cy='15' r='6' fill='white'/%3E%3Ccircle cx='14' cy='15' r='4.8' fill='%23e30a17'/%3E%3Cpath d='M19.5 15l-3.2 1.1 2-2.7v3.3l-2-2.7z' fill='white'/%3E%3C/svg%3E") center/100% no-repeat;box-shadow:0 0 0 3px #fff}
+.acard h3{margin-top:18px}
+.acard .role{color:var(--muted);font-size:14px;margin-top:4px}
+.acard .langs{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:14px}
+.acard .langs span{font-size:12px;font-weight:700;border-radius:999px;padding:5px 10px;background:var(--lav);color:var(--v1)}
+.quote{font-size:17px;line-height:1.5;margin-top:16px;color:var(--ink2);font-weight:500}
+@media(min-width:900px){.author{grid-template-columns:.9fr 1.1fr}}
+
+.price3{display:grid;gap:28px;margin-top:30px;align-items:center}
+.pside{text-align:center}
+.pside .math{display:grid;gap:10px;margin-top:16px}
+.pside .math div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;font-size:14px;color:var(--ink2);box-shadow:0 10px 22px -18px rgba(0,0,0,.3)}
+.pside .math b{color:var(--red);font-size:17px}
+.bigprice{font-size:clamp(76px,22vw,120px);font-weight:800;letter-spacing:-.06em;line-height:.9;background:var(--redgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pside .once{font-weight:700;font-size:17px;margin-top:8px}
+.pside .once span{display:block;color:var(--muted);font-weight:500;font-size:14px}
+.pside .btn{width:100%;max-width:340px;margin-top:20px;min-height:60px;font-size:16px}
+.pside .fine{font-size:12px;color:var(--muted);margin-top:10px}
+@media(min-width:900px){.price3{grid-template-columns:1fr 1.15fr 1fr}}
+
+.faq{margin-top:22px;display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 18px;box-shadow:0 10px 24px -22px rgba(60,20,80,.5)}
+.faq summary{list-style:none;cursor:pointer;padding:17px 0;font-weight:700;font-size:15.5px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;background:var(--lav);color:var(--v1);display:grid;place-items:center;font-size:18px;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--v1);color:#fff}
+.faq details p{padding:0 0 18px;color:var(--ink2);font-size:15px}
+
+.final{margin-top:10px;border-radius:28px;background:#fff;box-shadow:var(--shadow);border:1px solid var(--line);padding:26px 20px;display:grid;gap:20px;align-items:center;position:relative;overflow:hidden}
+.final h2{margin:0}
+.final .kedi{width:150px;margin:0 auto}
+.final .links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14.5px;color:var(--muted)}
+.final .links a{text-decoration:none}
+.final .btn{width:100%}
+@media(min-width:900px){.final{grid-template-columns:1.2fr .6fr .5fr;padding:36px}.final .kedi{width:190px}.final .links{flex-direction:column}}
+
+footer{padding:36px 0 110px;text-align:center;font-size:12.5px;color:var(--muted)}
+
+/* sticky */
+.sticky{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:55;display:flex;align-items:center;gap:10px;background:rgba(29,26,38,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;border-radius:18px;padding:9px 9px 9px 14px;box-shadow:0 20px 40px -14px rgba(0,0,0,.5);transform:translateY(160%);transition:transform .5s cubic-bezier(.2,.9,.2,1)}
+.sticky.show{transform:none}
+.sticky .t{font-size:13px;line-height:1.25;flex:1;min-width:0}
+.sticky .t b{display:block;font-size:14px}
+.sticky .t span{color:#bdb7cb}
+.sticky .btn{min-height:44px;padding:0 18px;font-size:14px;border-radius:12px;flex:none}
+@media(min-width:900px){.sticky{left:auto;right:24px;bottom:24px;width:420px}}
+
+@media(min-width:900px){.sec{padding:100px 0}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+:focus-visible{outline:3px solid var(--v2);outline-offset:3px;border-radius:8px}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<canvas id="confetti"></canvas>
+
+<!-- SVG sprites -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gBrand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a2b"/><stop offset="1" stop-color="#ff2e63"/></linearGradient>
+    <linearGradient id="gRed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7a4d"/><stop offset=".55" stop-color="#ff3d5f"/><stop offset="1" stop-color="#e5306e"/></linearGradient>
+    <linearGradient id="gFur" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#efe9f3"/></linearGradient>
+    <linearGradient id="gCap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e9e4ee"/></linearGradient>
+    <linearGradient id="gV" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a5cff"/><stop offset="1" stop-color="#b56cff"/></linearGradient>
+    <symbol id="mark" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="url(#gBrand)"/><path d="M11 20h15M20 13l7 7-7 7" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="spk" viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 19V5L7.5 9.5H4z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 010 7M18 6a8.5 8.5 0 010 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="bolt" viewBox="0 0 100 130"><path d="M62 2L10 74h34L30 128l62-82H56L72 2z" fill="url(#gRed)"/><path d="M62 2L50 46h8L72 2z" fill="#fff" opacity=".25"/></symbol>
+    <symbol id="heart" viewBox="0 0 120 120"><g transform="rotate(-12 60 60)"><rect x="10" y="12" width="96" height="82" rx="22" fill="url(#gRed)"/><path d="M34 90l-8 22 26-18z" fill="#ef3a6a"/><path d="M58 76s-22-13-22-27c0-8 6-13 12-13 5 0 8 3 10 6 2-3 5-6 10-6 6 0 12 5 12 13 0 14-22 27-22 27z" fill="#fff"/></g></symbol>
+    <symbol id="star" viewBox="0 0 40 40"><path d="M20 0c2 12 8 18 20 20-12 2-18 8-20 20-2-12-8-18-20-20C12 18 18 12 20 0z" fill="url(#gRed)"/></symbol>
+    <symbol id="kedi" viewBox="0 0 240 250">
+      <ellipse cx="120" cy="238" rx="66" ry="40" fill="url(#gFur)"/>
+      <ellipse cx="120" cy="138" rx="80" ry="70" fill="url(#gFur)"/>
+      <path d="M44 118C44 58 196 58 196 118C168 104 72 104 44 118Z" fill="url(#gCap)"/>
+      <path d="M44 118C72 104 168 104 196 118L198 124C168 112 72 112 42 124Z" fill="#dcd5e3"/>
+      <path d="M150 112C184 106 216 112 226 124C204 122 176 121 146 122Z" fill="#e7e1ec"/>
+      <path d="M54 102L64 40L104 76Z" fill="url(#gFur)"/><path d="M64 94L70 56L94 78Z" fill="#ffc3d3"/>
+      <path d="M186 102L176 40L136 76Z" fill="url(#gFur)"/><path d="M176 94L170 56L146 78Z" fill="#ffc3d3"/>
+      <circle cx="120" cy="86" r="15" fill="url(#gBrand)"/><path d="M112 86h12M119 80l6 6-6 6" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse cx="92" cy="146" rx="10" ry="12.5" fill="#231f2e"/><circle cx="95.5" cy="140.5" r="4" fill="#fff"/>
+      <ellipse cx="148" cy="146" rx="10" ry="12.5" fill="#231f2e"/><circle cx="151.5" cy="140.5" r="4" fill="#fff"/>
+      <ellipse cx="74" cy="168" rx="12" ry="7" fill="#ff8fab" opacity=".5"/><ellipse cx="166" cy="168" rx="12" ry="7" fill="#ff8fab" opacity=".5"/>
+      <path d="M113 163h14l-7 8z" fill="#ff6f91"/>
+      <path d="M120 171q0 9-10 9M120 171q0 9 10 9" fill="none" stroke="#231f2e" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M58 160l-26-4M58 168l-26 4M182 160l26-4M182 168l26 4" stroke="#cfc6d8" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Alterna">
+      <svg class="mk"><use href="#mark"/></svg>
+      <span><b>alterna</b><small>школа турецкого</small></span>
+    </a>
+    <nav class="nav">
+      <a href="#start">Разбор</a><a href="#lab">Тренажёр</a><a href="#map">Карта</a><a href="#quiz">Тест</a><a href="#alterna">Alterna</a>
+    </nav>
+    <div class="geo">Анталья, Akdeniz<br>A0 → C1</div>
+    <a class="btn btn-o js-buy" href="https://app.lava.top/products/2cdbb9f8-e65b-443e-8d2c-4fea4c121e41" target="_blank" rel="noopener">Получить доступ</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob" style="width:360px;height:360px;background:#ffd9cc;left:-120px;top:-60px"></div>
+  <div class="blob" style="width:420px;height:420px;background:#f0e1ff;right:-160px;top:120px"></div>
+  <div class="wrap grid">
+    <div>
+      <div class="kicker rv">Гайд 03 · Падежи · A1</div>
+      <h1 class="rv d1">Дательный падеж <span class="v" style="white-space:nowrap">-a&nbsp;/&nbsp;-e</span><br><span class="pill">кому · куда · к чему</span></h1>
+      <p class="sub rv d2"><b>Один суффикс</b> вместо десятка русских предлогов. Разбираю просто. Без «откройте страницу 42».</p>
+      <div class="btns rv d3">
+        <a class="btn btn-o" href="#start">Начать разбор</a>
+        <a class="btn btn-b" href="#lab">Сразу к тренажёру</a>
+      </div>
+      <div class="meta rv d4"><span><i></i>9 минут</span><span><i style="background:var(--red)"></i>7 интерактивов</span><span><i style="background:#22c55e"></i>тест в конце</span></div>
+    </div>
+    <div class="hvis" id="hvis" aria-hidden="true">
+      <svg class="ic ic-star float f2"><use href="#star"/></svg>
+      <svg class="ic ic-bolt float"><use href="#bolt"/></svg>
+      <div class="box bx1 float" data-d="18"><span class="tag">куда</span><span class="w">okul<span class="sx">a</span></span><span class="t">в школу</span></div>
+      <div class="box bx2 float f2" data-d="26"><span class="tag">кому</span><span class="w">anneme</span><span class="t">маме</span></div>
+      <div class="box bx3 float f3" data-d="14"><span class="tag">кому</span><span class="w">san<span class="sx">a</span></span><span class="t">тебе</span></div>
+      <div class="box bx4 float" data-d="22"><span class="tag">к чему</span><span class="w" style="font-family:Georgia,serif">bu fikr<span class="sx" style="color:#e0344f">e</span></span><span class="t">этой идее</span></div>
+      <div class="box bx5 float f3" data-d="30"><span class="tag">куда</span><span class="w">İstanbul'<span class="sx">a</span></span><span class="t">в Стамбул</span></div>
+      <svg class="kedi-h float f2" viewBox="0 0 240 250"><use href="#kedi"/></svg>
+      <svg class="ic ic-heart float f3"><use href="#heart"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- TRIO -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap center">
+    <h2 class="rv"><span class="v">1 суффикс</span> отвечает на три вопроса</h2>
+    <p class="lead rv d1">Смотри, куда направлено действие. Турецкий смотрит туда же →</p>
+    <div class="trio">
+      <div class="tcard rv">
+        <div class="img"><span class="big">okul<span class="sx">a</span></span><span class="rpill">Куда</span></div>
+        <p><b>Направление движения —</b>идёшь, едешь или летишь куда-то. Школа, дом, Стамбул</p>
+      </div>
+      <div class="tcard rv d1">
+        <div class="img" style="background:linear-gradient(160deg,#f6efff,#ffe9f1)"><span class="big">anne<span style="color:var(--v1)">m</span><span class="sx">e</span></span><span class="rpill">Кому</span></div>
+        <p><b>Получатель действия —</b>пишешь, даёшь, помогаешь, говоришь кому-то</p>
+      </div>
+      <div class="tcard rv d2">
+        <div class="img" style="background:linear-gradient(160deg,#fff4ef,#fdeaff)"><span class="big">fikr<span class="sx">e</span></span><span class="rpill">К чему</span></div>
+        <p><b>Куда направлено внимание —</b>смотришь, доверяешь, начинаешь, соглашаешься</p>
+      </div>
+    </div>
+    <div class="btns rv" style="justify-content:center"><a class="btn btn-o" href="#start" style="flex:0 1 280px">Разобрать по шагам</a></div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="sec" id="start" style="padding-top:10px">
+  <div class="wrap">
+    <div class="kicker rv">С чего всё начинается</div>
+    <h2 class="rv">Кому, куда <span class="v">и к чему</span></h2>
+    <p class="lead rv">В русском мы говорим: дать другу. Идти домой. Написать маме. Смотреть на кошку.</p>
+    <p class="lead rv">Четыре фразы. Три разных предлога. Плюс падежные окончания сверху.</p>
+    <p class="lead rv">Турецкий смотрит на это и говорит: зачем так сложно? Берёт <b>один суффикс</b>. Лепит в конец слова. Всё.</p>
+    <div class="exs rv" data-ex="Okul[a] gidiyorum.|Я иду в школу.;;Annem[e] yazıyorum.|Я пишу маме.;;San[a] bakıyorum.|Я смотрю на тебя."></div>
+    <div class="arrowscene rv" id="arrowscene">
+      <svg viewBox="0 0 600 200" aria-label="Стрелка от человека к школе">
+        <g transform="translate(0,50)"><svg width="140" height="146" viewBox="0 0 240 250"><use href="#kedi"/></svg></g>
+        <path class="path" d="M140 120 C 230 30, 360 30, 450 105" fill="none" stroke="url(#gV)" stroke-width="6" stroke-linecap="round"/>
+        <path class="head" d="M436 88 L454 109 L428 114" fill="none" stroke="#b56cff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="295" y="52" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="26" fill="#ff3b55">-a / -e</text>
+        <g transform="translate(468,58)"><rect x="0" y="34" width="110" height="74" rx="10" fill="#fff" stroke="#efe6f5" stroke-width="2"/><path d="M-6 38 L55 0 L116 38Z" fill="url(#gRed)"/><rect x="42" y="70" width="26" height="38" rx="4" fill="#8a5cff"/><rect x="14" y="52" width="20" height="16" rx="3" fill="#ffd8e0"/><rect x="76" y="52" width="20" height="16" rx="3" fill="#ffd8e0"/><text x="55" y="130" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="17" fill="#1d1a26">okul<tspan fill="#ff3b55">a</tspan></text></g>
+      </svg>
+    </div>
+    <p class="lead rv" style="margin-top:18px">Дательный падеж работает как <b>стрелка</b>. Не где ты стоишь. А куда летит действие.</p>
+  </div>
+</section>
+
+<!-- TOCHNAYA FORMA -->
+<section class="sec" style="background:linear-gradient(180deg,#fff,#fff7f4 50%,#fff)">
+  <div class="blob" style="width:380px;height:380px;background:#ffe0ea;left:30%;top:10%"></div>
+  <div class="wrap">
+    <div class="center">
+      <h2 class="rv">Хотите узнать<br><span class="v">точную форму?</span></h2>
+      <p class="lead rv d1">Форма слова <b>формируется индивидуально</b> и зависит от параметров вашего слова</p>
+    </div>
+    <div class="calc3">
+      <div class="side rv">
+        <svg viewBox="0 0 240 250" style="width:170px;margin:0 auto;filter:drop-shadow(0 20px 20px rgba(60,20,80,.2))"><use href="#kedi"/></svg>
+        <p><span class="v">Вы получаете точную форму без скрытых подвохов —</span> только прозрачный расчёт под конкретное слово.</p>
+        <p class="muted" style="font-size:13px">Каждое слово мы рассчитываем по запросу, с учётом всех нюансов!</p>
+        <a class="btn btn-b" href="#lab">Проверить слово</a>
+      </div>
+      <div class="rcard rv d1">
+        <h3>Что влияет на итоговую форму:</h3>
+        <ul class="chk">
+          <li><span><b>последняя гласная слова</b> (a, ı, o, u → -a; e, i, ö, ü → -e)</span></li>
+          <li><span><b>гласная на конце слова</b> (тогда нужен буфер y — две гласные подряд турецкий не любит)</span></li>
+          <li><span><b>последняя согласная</b> (p, ç, t, k любят смягчаться)</span></li>
+          <li><span><b>имя собственное</b> (Ankara'ya — через апостроф)</span></li>
+          <li><span><b>притяжательный суффикс</b> 3-го лица (появляется буфер n: evine)</span></li>
+        </ul>
+      </div>
+      <div class="side rv d2">
+        <div class="receipt" aria-label="Пример расчёта">
+          <div class="rh">РАСЧЁТ №03</div>
+          <div class="rl"><span>слово</span><b>kitap</b></div>
+          <div class="rl"><span>последняя гласная</span><b>a</b></div>
+          <div class="rl"><span>суффикс</span><b>-a</b></div>
+          <div class="rl"><span>смягчение</span><b>p → b</b></div>
+          <div class="rl"><span>итого</span><span class="sx">kitaba</span></div>
+        </div>
+        <p style="margin-top:26px"><span class="v">Отправьте нам слово,</span> планируемый смысл и пожелания к звучанию — и мы подготовим подробный грамматический расчёт</p>
+        <a class="btn btn-o" href="#lab">Получить расчёт</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAB -->
+<section class="sec" id="lab" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kicker rv">Тренажёр · работает без интернета в голове</div>
+    <h2 class="rv">Собери форму <span class="v">и посмотри, что произойдёт</span></h2>
+    <p class="lead rv">Выбери слово или впиши своё. Схема подсветит последнюю гласную, вставит буфер и смягчит согласную. По шагам.</p>
+    <div class="lab rv" style="margin-top:22px">
+      <div class="labgrid">
+        <div>
+          <h3>Шаг 0 · выбери слово</h3>
+          <div class="chips" id="chips"></div>
+          <form class="inrow" id="labform" autocomplete="off">
+            <input id="labin" placeholder="или впиши своё: deniz, Mehmet…" aria-label="Турецкое слово" spellcheck="false" autocapitalize="off">
+            <button class="btn btn-o" type="submit">Прогнать</button>
+          </form>
+          <div class="tiles" id="tiles" aria-live="polite"></div>
+          <div class="result"><div class="big" id="rbig">&nbsp;</div><div class="tr" id="rtr">&nbsp;</div></div>
+          <div class="err" id="lerr"></div>
+        </div>
+        <div>
+          <div class="steps" id="steps"></div>
+          <p class="warn">Правила работают для большинства слов. Исключения есть (saat → saate, şehir → şehre) — их тренажёр знает, если слово в списке. Чужие слова проверяй по словарю.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1. KUDA -->
+<section class="sec">
+  <div class="wrap">
+    <span class="num rv">01</span>
+    <h2 class="rv">Куда. <span class="v">Самое понятное</span></h2>
+    <p class="lead rv">Направление движения. Идёшь, едешь, летишь. Турецкому неважно на чём. Важно куда.</p>
+    <div class="exs two rv" data-ex="Ev[e] gidiyorum.|Я иду домой.;;Okul[a] gidiyoruz.|Мы идём в школу.;;İstanbul'[a] uçuyorum.|Я лечу в Стамбул.;;Restoran[a] gidiyor.|Он идёт в ресторан.;;Park[a] gittik.|Мы пошли в парк."></div>
+    <div class="note rv">С именами городов, стран и людей суффикс пишется <b>через апостроф</b>: Ankara'{y}[a] · Murat'[a] · Türkiye'{y}[e]. Апостроф как забор. Имя за ним не трогаем.</div>
+
+    <h3 class="rv" style="margin-top:44px">Куда, где, откуда. Три формы — учим сразу</h3>
+    <div class="seg rv" id="geoTabs" role="tablist">
+      <button class="on" data-k="0" role="tab">Куда<small>-a / -e</small></button>
+      <button data-k="1" role="tab">Где<small>-da / -de</small></button>
+      <button data-k="2" role="tab">Откуда<small>-dan / -den</small></button>
+    </div>
+    <div class="scene rv">
+      <svg viewBox="0 0 600 220" aria-hidden="true">
+        <path d="M0 196 H600" stroke="#e6ddf0" stroke-width="3"/>
+        <g transform="translate(330,40)">
+          <rect x="0" y="62" width="200" height="94" rx="12" fill="#fff" stroke="#eee5f5" stroke-width="2"/>
+          <path d="M-14 68 L100 0 L214 68Z" fill="url(#gRed)"/>
+          <rect x="84" y="100" width="34" height="56" rx="5" fill="#8a5cff"/>
+          <rect x="24" y="86" width="36" height="28" rx="5" fill="#ffd8e0"/><rect x="142" y="86" width="36" height="28" rx="5" fill="#ffd8e0"/>
+          <text x="100" y="48" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="20" fill="#fff">ev</text>
+        </g>
+        <g id="walker"><svg x="0" y="62" width="130" height="135" viewBox="0 0 240 250"><use href="#kedi"/></svg></g>
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b56cff"/></marker></defs><path id="geoArrow" d="" fill="none" stroke="#9a64ff" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 10" marker-end="url(#ah)"/>
+      </svg>
+      <div class="cap"><div class="tr" id="geoTr"></div><div class="ru" id="geoRu"></div></div>
+    </div>
+    <div class="geo3 rv"><div><b>okul<span class="sx">a</span></b><span>в школу</span></div><div><b>okul<span class="sx">da</span></b><span>в школе</span></div><div><b>okul<span class="sx">dan</span></b><span>из школы</span></div></div>
+    <div class="bad rv"><span class="x">✕</span><span>Перепутаешь — и вместо «иду в универ» скажешь «иду из универа». Универ и так непростое место. Не давай ему лишний шанс.</span></div>
+  </div>
+</section>
+
+<!-- 2. KOMU -->
+<section class="sec" style="background:linear-gradient(180deg,#fff,#fbf7ff 50%,#fff)">
+  <div class="wrap">
+    <span class="num rv">02</span>
+    <h2 class="rv">Кому. <span class="v">Получатель действия</span></h2>
+    <p class="lead rv">Написал, купил, спросил, помог. Кто получил — тот в дательном.</p>
+    <div class="exs two rv" data-ex="San[a] mesaj yazdım.|Я написал тебе сообщение.;;Annem[e] çiçek aldım.|Я купил маме цветы.;;Öğretmen[e] soru sordum.|Я задал вопрос преподавателю.;;Arkadaşım[a] yardım ettim.|Я помог другу."></div>
+    <h3 class="rv" style="margin-top:40px">Местоимения. Тапни — перевернётся</h3>
+    <p class="lead rv" style="font-size:15px;margin-top:6px">Ben не становится «beneye». Турецкий пожалел нас и сократил до bana. Sen — до sana. Эти две учим в лицо.</p>
+    <div class="flips rv" id="flips"></div>
+    <button class="flipall" id="flipall">Перевернуть все →</button>
+    <div class="exs two rv" data-ex="Ban[a] yardım et.|Помоги мне.;;San[a] inanıyorum.|Я верю тебе.;;On[a] söyledim.|Я сказал ему или ей.;;Biz[e] gel.|Приходи к нам."></div>
+  </div>
+</section>
+
+<!-- 3. K CHEMU -->
+<section class="sec">
+  <div class="wrap">
+    <span class="num rv">03</span>
+    <h2 class="rv">К чему. <span class="v">Куда смотрит внимание</span></h2>
+    <p class="lead rv">Дательный нужен не только людям и местам. Он показывает всё, к чему тянется взгляд, отношение или действие.</p>
+    <div class="exs two rv" data-ex="Bu fikr[e] katılıyorum.|Я согласен с этой идеей.;;San[a] güveniyorum.|Я доверяю тебе.;;Çocuğ[a] bakıyorum.|Я смотрю на ребёнка.;;Bu iş[e] başladım.|Я начал это дело.;;Müzik dinleme{y}[e] başladım.|Я начал слушать музыку."></div>
+    <div class="note rv"><b>Главная мысль.</b> Турецкий глагол сам решает, какой падеж ему нужен. Не переводи русские предлоги слово в слово. «Согласен <i>с</i> идеей» — а в турецком дательный. Логики нет. Учи глагол сразу с управлением.</div>
+    <h3 class="rv" style="margin-top:40px">Глаголы-боссы. Требуют дательный</h3>
+    <div class="bosses">
+      <div class="boss rv"><span class="ico">→</span><div><b>birine yardım etmek</b><span>помогать кому-то</span></div></div>
+      <div class="boss rv d1"><span class="ico">→</span><div><b>birine inanmak</b><span>верить кому-то</span></div></div>
+      <div class="boss rv"><span class="ico">→</span><div><b>birine güvenmek</b><span>доверять кому-то</span></div></div>
+      <div class="boss rv d1"><span class="ico">→</span><div><b>birine bakmak</b><span>смотреть на кого-то</span></div></div>
+      <div class="boss rv"><span class="ico">→</span><div><b>bir şeye başlamak</b><span>начинать что-то</span></div></div>
+      <div class="boss rv d1"><span class="ico">→</span><div><b>bir şeye katılmak</b><span>участвовать в чём-то, соглашаться с чем-то</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. VS -->
+<section class="sec" style="background:linear-gradient(180deg,#fff,#f4fbff 50%,#fff)">
+  <div class="wrap">
+    <span class="num rv">04</span>
+    <h2 class="rv">Дательный и винительный. <span class="v">Не путай</span></h2>
+    <p class="lead rv">Место, где многие начинают смотреть в окно и думать о кофе. Не надо. Тут всё решает одна буква.</p>
+    <div class="vs">
+      <div class="vsbox rv">
+        <div class="vstog" data-pair="0"><button class="on" data-i="0">Смотрю</button><button data-i="1">Вижу</button></div>
+        <div class="vsout"></div>
+      </div>
+      <div class="vsbox rv d1">
+        <div class="vstog" data-pair="1"><button class="on" data-i="0">Доверяю</button><button data-i="1">Люблю</button></div>
+        <div class="vsout"></div>
+      </div>
+    </div>
+    <div class="card rv" style="margin-top:18px;padding:8px 10px;overflow-x:auto">
+      <table class="tbl">
+        <tr><th>Глагол</th><th>Падеж</th><th>Пример</th></tr>
+        <tr><td>güvenmek</td><td><span class="tag-d">дательный</span></td><td>sana güveniyorum</td></tr>
+        <tr><td>inanmak</td><td><span class="tag-d">дательный</span></td><td>ona inanıyorum</td></tr>
+        <tr><td>bakmak</td><td><span class="tag-d">дательный</span></td><td>bana bak</td></tr>
+        <tr><td>sevmek</td><td><span class="tag-a">винительный</span></td><td>seni seviyorum</td></tr>
+        <tr><td>görmek</td><td><span class="tag-a">винительный</span></td><td>onu görüyorum</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 5. SOFTENING -->
+<section class="sec">
+  <div class="wrap">
+    <span class="num rv">05</span>
+    <div class="center">
+      <h2 class="rv">Мы смягчим согласную, <span class="v">которая мешает звучать красиво,</span> по доступной стоимости</h2>
+      <p class="lead rv d1">Чтобы слово не спотыкалось — работаем с четырьмя видами <b>послесуффиксной обработки</b></p>
+    </div>
+    <div class="softs rv">
+      <div class="sc">
+        <div class="ph" style="background:linear-gradient(160deg,#fff1ec,#ffe6ef)"><div class="pkg" style="background:linear-gradient(150deg,#e45bd4,#9a2bc3)">kitab<span style="text-decoration:underline">a</span></div><span class="rpill">p → b</span></div>
+        <ul class="chk red"><li><span><b>Самая частая пара.</b> kitap → kitaba, dolap → dolaba</span></li><li><span>Глухая между гласными не выживает. <b>Она звенит</b></span></li><li><span>Односложные часто не трогаем: top → topa</span></li></ul>
+      </div>
+      <div class="sc">
+        <div class="ph" style="background:linear-gradient(160deg,#fff4ec,#fff0e0)"><div class="pkg" style="background:linear-gradient(150deg,#a2244e,#5e1030);font-family:Georgia,serif;font-style:italic;font-weight:400">ağac<span style="text-decoration:underline">a</span></div><span class="rpill">ç → c</span></div>
+        <ul class="chk red"><li><span><b>ağaç → ağaca</b>, к дереву</span></li><li><span>Турецкая c читается <b>как «дж»</b>: агаджа</span></li><li><span>Звучит мягче. Турки это любят</span></li></ul>
+      </div>
+      <div class="sc">
+        <div class="ph" style="background:linear-gradient(160deg,#eefbf9,#f1ecff)"><div class="pkg" style="background:linear-gradient(150deg,#3fd6c4,#16a5a5)">kanad<span style="text-decoration:underline">a</span></div><span class="rpill">t → d</span></div>
+        <ul class="chk red"><li><span><b>kanat → kanada</b>, к крылу</span></li><li><span><b>Реже, но живая.</b> Много слов не смягчаются: hayat → hayata</span></li><li><span>Встретил t на конце — проверь по словарю</span></li></ul>
+      </div>
+      <div class="sc">
+        <div class="ph" style="background:linear-gradient(160deg,#f3efff,#ffeef3)"><div class="pkg" style="background:linear-gradient(150deg,#7b6cff,#3c2dc4)">çocuğ<span style="text-decoration:underline">a</span></div><span class="rpill">k → ğ / g</span></div>
+        <ul class="chk red"><li><span><b>çocuk → çocuğa</b>, к ребёнку</span></li><li><span>ğ не читается. <b>Она тянет гласную</b>: чоджуа</span></li><li><span>После n будет g: renk → renge</span></li></ul>
+      </div>
+    </div>
+    <div class="note rv">Не вычисляй все формы на голой логике. Турецкий любит гармонию, но иногда оставляет сюрприз. Учи слово сразу парой: <b>kitap, kitaba</b> · <b>çocuk, çocuğa</b> · <b>renk, renge</b>.</div>
+  </div>
+</section>
+
+<!-- 6. CHAIN -->
+<section class="sec" style="background:linear-gradient(180deg,#fff,#fff8f5 50%,#fff)">
+  <div class="wrap">
+    <span class="num rv">06</span>
+    <h2 class="rv">Суффиксы едут <span class="v">как вагоны</span></h2>
+    <p class="lead rv">Сначала слово. Потом множественное число. Потом «чей». Потом падеж. Локомотив впереди, падеж замыкает состав.</p>
+    <div class="chain rv" id="chain">
+      <div class="cars">
+        <span class="car c1">ev<small>дом</small></span><span class="plus">+</span>
+        <span class="car c2">ler<small>много</small></span><span class="plus">+</span>
+        <span class="car c3">imiz<small>наш</small></span><span class="plus">+</span>
+        <span class="car c4">e<small>куда</small></span>
+      </div>
+      <div class="res" id="chainRes">Нажми — и состав сцепится</div>
+      <button class="btn btn-o" id="chainBtn">Сцепить вагоны</button>
+    </div>
+    <div class="exs two rv" data-ex="Annem[e]|моей маме;;Arkadaşım[a]|моему другу;;Evim[e]|в мой дом"></div>
+    <h3 class="rv" style="margin-top:40px">Буфер n. Прячется за «его / её»</h3>
+    <p class="lead rv" style="font-size:15px;margin-top:6px">Если перед падежом уже стоит третье лицо, между ними встаёт n.</p>
+    <div class="exs two rv" data-ex="Evi{n}[e]|в его или её дом;;Kitabı{n}[a]|к его или её книге;;Arabası{n}[a]|к его или её машине"></div>
+    <div class="note rv">Это не наказание. Это турецкий следит, чтобы суффиксы <b>не врезались друг в друга на скорости</b>.</div>
+  </div>
+</section>
+
+<!-- 7. QUESTIONS -->
+<section class="sec">
+  <div class="wrap">
+    <span class="num rv">07</span>
+    <h2 class="rv">Вопросы. <span class="v">Nereye, kime, neye</span></h2>
+    <p class="lead rv">Вопрос тоже в дательном. Отвечаешь тем же падежом. Удобно.</p>
+    <div class="chat" id="chat">
+      <div class="bub l">Nere{y}[e] gidiyorsun?<small>Куда ты идёшь?</small></div>
+      <div class="bub r">Ev[e]. Yoruldum.<small>Домой. Устал.</small></div>
+      <div class="bub l">Kim[e] yazıyorsun?<small>Кому ты пишешь?</small></div>
+      <div class="bub r">Annem[e].<small>Маме.</small></div>
+      <div class="bub l">Ne{y}[e] bakıyorsun?<small>На что ты смотришь?</small></div>
+      <div class="bub r">Deniz[e]. Güzel, değil mi?<small>На море. Красиво же?</small></div>
+    </div>
+    <div class="qw rv"><div><b>bura<span class="bf">y</span><span class="sx">a</span></b><span>сюда</span></div><div><b>ora<span class="bf">y</span><span class="sx">a</span></b><span>туда</span></div><div><b>şura<span class="bf">y</span><span class="sx">a</span></b><span>вон туда</span></div></div>
+    <div class="exs two rv" data-ex="Bura{y}[a] gel.|Иди сюда.;;Ora{y}[a] gitme.|Не ходи туда."></div>
+  </div>
+</section>
+
+<!-- 8. SCENE / BANNER -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <span class="num rv">08</span>
+    <div class="banner rv">
+      <div class="bgrid">
+        <div>
+          <span class="badge">Мини-сцена</span>
+          <h2>Один день — <b>четыре</b> дательных падежа</h2>
+          <p style="opacity:.9;font-size:15px">Тапай по строчкам. Смотри, куда едет каждое действие.</p>
+          <div class="lines" id="lines">
+            <button class="line"><span><span class="t">Sabah okul<span class="sx">a</span> gidiyorum.</span><span class="ru">Утром я иду в школу.</span></span><i class="ck"></i></button>
+            <button class="line"><span><span class="t">Öğretmen<span class="sx">e</span> soru soruyorum.</span><span class="ru">Я задаю вопрос преподавателю.</span></span><i class="ck"></i></button>
+            <button class="line"><span><span class="t">Sonra arkadaşım<span class="sx">a</span> mesaj yazıyorum.</span><span class="ru">Потом пишу сообщение другу.</span></span><i class="ck"></i></button>
+            <button class="line"><span><span class="t">Akşam ev<span class="sx">e</span> dönüyorum.</span><span class="ru">Вечером возвращаюсь домой.</span></span><i class="ck"></i></button>
+          </div>
+        </div>
+        <div class="bus">
+          <svg class="van" viewBox="0 0 330 170" aria-hidden="true">
+            <ellipse cx="165" cy="160" rx="150" ry="9" fill="rgba(0,0,0,.18)"/>
+            <path d="M18 60 Q20 28 52 26 H250 Q282 26 296 62 L316 100 Q322 112 320 126 V140 Q320 150 308 150 H24 Q12 150 12 138 V76 Q12 62 18 60Z" fill="#fff"/>
+            <path d="M250 34 Q276 36 288 64 L300 92 H240 V40 Q240 34 250 34Z" fill="#2c2838"/>
+            <rect x="34" y="40" width="54" height="40" rx="8" fill="#2c2838"/><rect x="98" y="40" width="54" height="40" rx="8" fill="#2c2838"/><rect x="162" y="40" width="64" height="40" rx="8" fill="#2c2838"/>
+            <rect x="12" y="96" width="308" height="14" fill="url(#gRed)"/>
+            <text x="120" y="132" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="20" fill="#1d1a26" letter-spacing="2">DOLMUŞ</text>
+            <circle cx="72" cy="150" r="20" fill="#1d1a26"/><circle cx="72" cy="150" r="8" fill="#cfc8d8"/>
+            <circle cx="262" cy="150" r="20" fill="#1d1a26"/><circle cx="262" cy="150" r="8" fill="#cfc8d8"/>
+            <rect x="296" y="112" width="18" height="8" rx="3" fill="#ffd23f"/>
+          </svg>
+          <svg class="kedi float" viewBox="0 0 240 250" aria-hidden="true"><use href="#kedi"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="carriers">
+      <div class="rv"><div class="sfx"><span>-a</span><span>-e</span><span>-ya</span><span>-ye</span><span>-na</span><span>-ne</span></div>
+      <p class="lead" style="font-size:15px;margin-top:10px">Для доставки смысла используем <span class="v">проверенные суффиксы:</span> -a, -e, буферные y и n. Других перевозчиков у дательного нет.</p></div>
+      <div class="rv d1"><p class="lead" style="font-size:15px">Уже на этапе чтения мы подскажем <span class="v">ориентировочное направление действия</span> и выберем удобный падеж</p>
+      <div class="btns" style="margin-top:16px"><a class="btn btn-o" href="#quiz" style="flex:0 1 260px">Проверить себя</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="sec" id="map" style="padding-top:20px">
+  <div class="wrap">
+    <div class="center">
+      <h2 class="rv">Посмотрите на <span class="v">карту</span><br>дательного падежа</h2>
+      <p class="lead rv d1">Анталья. Жми на точки. Каждая — место, куда ведёт суффикс.</p>
+    </div>
+    <div class="map rv" id="mapbox">
+      <svg class="bg" viewBox="0 0 1000 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="1000" height="620" fill="#f3f1f6"/>
+        <g fill="#ebe7ef">
+          <rect x="40" y="40" width="170" height="110" rx="10"/><rect x="250" y="30" width="200" height="90" rx="10"/><rect x="500" y="40" width="160" height="130" rx="10"/><rect x="710" y="30" width="250" height="100" rx="10"/>
+          <rect x="60" y="200" width="150" height="140" rx="10"/><rect x="260" y="170" width="180" height="120" rx="10"/><rect x="700" y="180" width="120" height="150" rx="10"/><rect x="860" y="170" width="110" height="160" rx="10"/>
+          <rect x="250" y="330" width="170" height="80" rx="10"/><rect x="480" y="360" width="190" height="60" rx="10"/><rect x="720" y="370" width="230" height="60" rx="10"/>
+        </g>
+        <path d="M0 470 C 150 440, 300 500, 480 470 S 800 440, 1000 480 V620 H0Z" fill="#d7ecfb"/>
+        <path d="M0 470 C 150 440, 300 500, 480 470 S 800 440, 1000 480" fill="none" stroke="#c4e1f6" stroke-width="6"/>
+        <text x="620" y="560" font-family="Manrope" font-style="italic" font-weight="700" font-size="30" fill="#9ccbeb">Akdeniz</text>
+        <g stroke="#fff" stroke-width="16" fill="none" stroke-linecap="round">
+          <path d="M0 170 H1000"/><path d="M230 0 V460"/><path d="M470 0 V450"/><path d="M680 0 V440"/><path d="M0 330 C 300 320, 600 350, 1000 350"/><path d="M840 0 L 900 460"/>
+        </g>
+        <g font-family="Manrope" font-size="15" font-weight="600" fill="#b7b0c2">
+          <text x="250" y="160">Atatürk Cd.</text><text x="705" y="345" transform="rotate(1 705 345)">Konyaaltı Cd.</text><text x="478" y="240" transform="rotate(90 478 240)">Işıklar Cd.</text>
+        </g>
+        <path id="route" d="M140 110 C 260 120, 330 90, 380 230 S 560 300, 590 250 S 760 240, 780 260 S 900 300, 880 410" fill="none" stroke="#ff3b55" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div id="pins"></div>
+      <div class="mapcard" id="mapcard"><div><div class="k" id="mck"></div><div class="tr" id="mctr"></div><div class="ru" id="mcru"></div></div><button class="spk" id="mcspk" aria-label="Послушать"><svg width="22" height="22"><use href="#spk"/></svg></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="sec" id="quiz" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kicker rv">Мини-тренировка</div>
+    <h2 class="rv">Семь фраз. <span class="v">Проверь себя</span></h2>
+    <p class="lead rv">Выбирай правильный перевод. Ошибёшься — объясню, почему. Без двоек в дневник.</p>
+    <div class="quiz rv" id="quizbox"></div>
+  </div>
+</section>
+
+<!-- CHEAT -->
+<section class="sec" id="cheat" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kicker rv">Шпаргалка</div>
+    <h2 class="rv">Сохрани скрин. <span class="v">Тут всё</span></h2>
+    <div class="cheat rv">
+      <div class="row"><b>-a / -e</b><span>кому, куда, к чему</span></div>
+      <div class="row"><b>ev<span class="sx">e</span></b><span>домой</span></div>
+      <div class="row"><b>okul<span class="sx">a</span></b><span>в школу</span></div>
+      <div class="row"><b>san<span class="sx">a</span></b><span>тебе</span></div>
+      <div class="row"><b>annem<span class="sx">e</span></b><span>моей маме</span></div>
+      <div class="row"><b>bu fikr<span class="sx">e</span></b><span>с этой идеей</span></div>
+      <div class="row"><b>çocuğ<span class="sx">a</span> bakıyorum</b><span>смотрю на ребёнка</span></div>
+      <div class="row"><b>çocuğu görüyorum</b><span>вижу ребёнка</span></div>
+      <div class="rule">Если действие движется к человеку, месту, предмету или идее — турецкий <b>очень вероятно</b> захочет дательный падеж.</div>
+      <button class="btn btn-o" id="copyCheat">Скопировать шпаргалку</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AD ================= -->
+<section class="sec ad" id="alterna">
+  <div class="blob" style="width:420px;height:420px;background:#ffe0d3;left:-160px;top:40px"></div>
+  <div class="blob" style="width:460px;height:460px;background:#efe2ff;right:-180px;top:40%"></div>
+  <div class="wrap">
+    <!-- bridge / Zeigarnik -->
+    <div class="kicker rv">Ты только что закрыл гайд</div>
+    <h2 class="rv">1 из 128. <span class="v">Осталось 127</span></h2>
+    <p class="lead rv">Это был один падеж. В турецком их шесть. Плюс времена, наклонения, изафет, причастия. Звучит страшно.</p>
+    <p class="lead rv">Но по сути это просто <b>127 таких же страниц</b>. Разница одна: этот гайд ты нашёл случайно. В Alterna они лежат по порядку. От A0 до C1.</p>
+    <div class="dots rv" id="dots" aria-label="Пройден 1 гайд из 128"></div>
+    <div class="dotcap rv"><span><b>●</b> пройден сегодня</span><span>127 ждут в Alterna</span></div>
+
+    <div class="proof">
+      <div class="rv">
+        <h3>Видишь третью строчку?</h3>
+        <p class="lead" style="font-size:15.5px;margin-top:8px">Это скрин из Notion-хаба Alterna. Раздел «Падежи». Третья строка — <b>«Дательный падеж: -a / -e»</b>. То, что ты только что прошёл. Рядом ещё пять.</p>
+      </div>
+      <div class="shot hl rv d1"><div class="bar"><i></i><i></i><i></i>Alterna · Грамматика · Падежи</div><div style="position:relative"><img src="media/nt_cases.webp" alt="Список падежей в Notion-хабе Alterna" loading="lazy" width="1100" height="520"><span class="ring"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:10px;background:linear-gradient(180deg,#fff,#fff6f3)">
+  <div class="wrap">
+    <div class="phero">
+      <div>
+        <div class="kicker rv">Alterna A0 → C1</div>
+        <h2 class="rv" style="font-size:clamp(34px,9vw,58px)">Турецкий, <span class="v">который уже собран</span> <span class="rpill" style="font-size:.38em;vertical-align:middle;letter-spacing:0">за тебя</span></h2>
+        <p class="lead rv"><b>Всё уже собрано. Искать не надо.</b> Грамматика, лексика, экзамены, работа и 1716 материалов по уровням. Открываешь свой уровень и берёшь.</p>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="fc rv"><span class="n" data-count="128">0</span><div><b>гайдов по грамматике</b><span>Разбираю как здесь. Без «откройте страницу 42»</span></div></div>
+      <div class="fc rv d1"><span class="n" data-count="131">0</span><div><b>блок лексики по темам</b><span>Не список слов, а то, что реально говорят</span></div></div>
+      <div class="fc rv d2"><span class="n" data-count="109">0</span><div><b>интерактивных ресурсов</b><span>Слова, тексты, диалоги, аудирование, игры на запоминание</span></div></div>
+      <div class="fc rv"><span class="n" data-count="32">0</span><div><b>блока по экзаменам</b><span>A1, A2, B1, B2, C1 — по каждому отдельно</span></div></div>
+      <div class="fc rv d1"><span class="n" data-count="36">0</span><div><b>гайдов по работе</b><span>Для тех, кто ищет работу или уже пашет</span></div></div>
+      <div class="fc big rv d2"><span class="n" data-count="1716">0</span><div><b>материалов по уровням</b><span>Фильмы, книги, мультики, подкасты, приложения, ютуб</span></div></div>
+    </div>
+
+    <div class="lvl rv">
+      <h3>Какой у тебя уровень? <span class="muted" style="font-weight:500;font-size:15px">Покажу, что там для тебя</span></h3>
+      <div class="seg" id="lvlTabs">
+        <button class="on" data-k="0">A0<small>ноль</small></button>
+        <button data-k="1">A1–A2<small>база</small></button>
+        <button data-k="2">B1–B2<small>середина</small></button>
+        <button data-k="3">C1<small>почти носитель</small></button>
+      </div>
+      <div class="lvlout" id="lvlOut"></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE -->
+<section class="sec" style="padding-top:30px">
+  <div class="wrap">
+    <div class="center">
+      <h2 class="rv">Загляни <span class="v">внутрь</span></h2>
+      <p class="lead rv d1">Реальные экраны платформы. Не макеты. Листай →</p>
+    </div>
+    <div class="phones" id="phones">
+      <div class="phone"><div class="fr"><img src="media/ph_route.webp" alt="Маршрут A1: фундамент" loading="lazy"></div><b>Маршрут по уровням</b><span>Что учить, сколько недель, в каком порядке</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_cizgi.webp" alt="Alterna Çizgi: мультики" loading="lazy"></div><b>Alterna Çizgi</b><span>138 мультфильмов. Медленная речь, картинка объясняет смысл</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_film.webp" alt="Карточка мультфильма" loading="lazy"></div><b>Карточка фильма</b><span>Уровень, где смотреть, «хочу / смотрю / посмотрел»</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_yt.webp" alt="YouTube-каталог" loading="lazy"></div><b>YouTube по уровням</b><span>Каналы и видео, отобранные вручную</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_week.webp" alt="План на неделю" loading="lazy"></div><b>План на неделю</b><span>Пять видео, по одному на будний день</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_kitap.webp" alt="Alterna Kitap" loading="lazy"></div><b>Alterna Kitap</b><span>Книги с той страницы, где тебе понятно</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_podcast.webp" alt="Alterna Podcasts" loading="lazy"></div><b>Alterna Podcasts</b><span>Турецкий в наушниках, от A1 до C1</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_apps.webp" alt="Alterna Uygulama" loading="lazy"></div><b>Alterna Uygulama</b><span>143 сервиса. Какие реально двигают турецкий</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_quiz.webp" alt="Клуб и мини-игры" loading="lazy"></div><b>Клуб и игры</b><span>Челлендж недели, значки, викторины</span></div>
+      <div class="phone"><div class="fr"><img src="media/ph_cabinet.webp" alt="Личный кабинет" loading="lazy"></div><b>Личный кабинет</b><span>Цель на день, минуты, прогресс</span></div>
+    </div>
+    <div class="pdots" id="pdots"></div>
+
+    <div class="lap rv">
+      <h3>Видео: как это работает <span class="muted" style="font-weight:500;font-size:15px">— записи экрана</span></h3>
+      <div class="chips" id="vtabs" style="margin-top:12px"></div>
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span id="vbar">alterna</span></div>
+        <video id="vid" muted playsinline loop preload="none"></video>
+      </div>
+      <p class="cap" id="vcap"></p>
+    </div>
+
+    <div class="rv" style="margin-top:40px">
+      <h3>Маршрут, а не учебник</h3>
+      <p class="lead" style="font-size:15px;margin-top:6px">Alterna построена как путешествие. Четыре города — четыре этапа.</p>
+      <div class="route">
+        <div class="stn"><span class="lv">A1</span><div><b>Стамбул</b><span>Первые фразы и алфавит</span></div></div>
+        <div class="stn"><span class="lv">A2</span><div><b>Измир</b><span>Быт, магазины, соседи</span></div></div>
+        <div class="stn"><span class="lv">B1</span><div><b>Анталья</b><span>Свободный разговор на любую тему</span></div></div>
+        <div class="stn"><span class="lv">B2+</span><div><b>Анкара</b><span>Учёба и работа по-турецки</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIME CALC -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kicker rv">Честная математика</div>
+    <h2 class="rv">Сколько стоит <span class="v">бесплатный</span> турецкий?</h2>
+    <p class="lead rv">Бесплатные материалы бесплатны. Время на их поиск — нет. Посчитаем.</p>
+    <div class="timer rv">
+      <label for="mins">Сколько минут ты тратишь, чтобы найти и проверить <b>один</b> нормальный материал под свой уровень? <span class="mins" id="minsv">5 мин</span></label>
+      <input type="range" id="mins" min="1" max="20" value="5">
+      <div class="tout">
+        <div><b id="hrs">143</b><span>часов на поиск 1716 материалов</span></div>
+        <div><b id="days">18</b><span>рабочих дней по 8 часов</span></div>
+      </div>
+      <p class="punch" id="punch"></p>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="kicker rv">Кто это собрал</div>
+    <h2 class="rv">Не методичка из 90-х. <span class="v">Студент, который там живёт</span></h2>
+    <div class="author">
+      <div class="acard rv">
+        <div class="ava">TA</div>
+        <h3>Тимур Ахметов</h3>
+        <div class="role">Akdeniz Üniversitesi, Анталья · электроинженерия</div>
+        <div class="langs"><span>TÖMER C1</span><span>IELTS 7.5</span><span>🇰🇿 Шымкент → 🇹🇷 Анталья</span></div>
+        <p class="quote">«Я год учил турецкий на подготовительном TÖMER. Потом пошёл в турецкий университет. Всё, что реально пригодилось, я разложил по полкам. Остальное выкинул».</p>
+      </div>
+      <div class="rcard rv d1">
+        <h3 style="font-size:19px">Наша цель — сделать турецкий, который не просто учат, <u>а на котором говорят</u></h3>
+        <ul class="chk">
+          <li><span><b>Год на TÖMER</b> — подготовительный курс турецкого, после которого идут в турецкий вуз</span></li>
+          <li><span><b>Технический переводчик</b> с русского на турецкий</span></li>
+          <li><span><b>Стажировка в консульстве РК</b> в Анталье</span></li>
+          <li><span><b>4 языка:</b> казахский, русский, турецкий, английский</span></li>
+          <li><span>Проект Alterna — <b>travel-quest формат</b>: учишь язык как маршрут по стране</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="sec" id="price" style="background:linear-gradient(180deg,#fff,#fff5f1 40%,#fbf5ff)">
+  <div class="wrap">
+    <div class="center">
+      <h2 class="rv">Хотите узнать<br><span class="v">точную стоимость?</span></h2>
+      <p class="lead rv d1">Цена доступа <b>не формируется индивидуально</b> и не зависит от параметров вашего заказа. Она одна.</p>
+    </div>
+    <div class="price3">
+      <div class="pside rv">
+        <svg viewBox="0 0 240 250" style="width:150px;margin:0 auto;filter:drop-shadow(0 20px 20px rgba(60,20,80,.2))"><use href="#kedi"/></svg>
+        <div class="math">
+          <div>$30 ÷ 128 гайдов = <b>23 цента</b> за гайд</div>
+          <div>$30 ÷ 1716 материалов = <b>меньше 2 центов</b> за материал</div>
+        </div>
+      </div>
+      <div class="rcard rv d1">
+        <h3>Что входит в доступ:</h3>
+        <ul class="chk">
+          <li><span><b>128 гайдов</b> по грамматике — как этот, от A0 до C1</span></li>
+          <li><span><b>131 блок лексики</b> по темам — еда, больница, гостиница, работа</span></li>
+          <li><span><b>109 интерактивных ресурсов</b> — диалоги, аудирование, игры</span></li>
+          <li><span><b>32 блока по экзаменам</b> — A1, A2, B1, B2, C1 отдельно</span></li>
+          <li><span><b>36 гайдов по работе</b> — для тех, кто ищет или уже пашет</span></li>
+          <li><span><b>1716 материалов</b> по уровням — фильмы, книги, мультики, подкасты, приложения, ютуб</span></li>
+        </ul>
+      </div>
+      <div class="pside rv d2">
+        <div class="bigprice">$30</div>
+        <div class="once">Один раз. Доступ навсегда.<span>Без подписки. Без «продлите, чтобы не потерять прогресс».</span></div>
+        <a class="btn btn-o js-buy" href="https://app.lava.top/products/2cdbb9f8-e65b-443e-8d2c-4fea4c121e41" target="_blank" rel="noopener">Получить доступ за $30</a>
+        <div class="fine">Оплата на странице продукта Lava.top</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="rv">Частые <span class="v">вопросы</span></h2>
+    <div class="faq">
+      <details class="rv"><summary>Я вообще ноль. Мне туда?</summary><p>Да. Там есть A0. Начинаешь с алфавита: 29 букв, шесть незнакомых. Потом гармония гласных. Потом падежи — как этот. Мультики с медленной речью вместо сериалов.</p></details>
+      <details class="rv"><summary>Это подписка?</summary><p>Нет. $30 один раз. Доступ навсегда. Никаких ежемесячных списаний.</p></details>
+      <details class="rv"><summary>Чем это лучше бесплатного ютуба?</summary><p>Ютуб бесплатный. Порядок — нет. В Alterna ютуб тоже есть. Только уже отсортированный по уровням и проверенный вручную. Ты не тратишь вечер на «Learn Turkish in 5 minutes».</p></details>
+      <details class="rv"><summary>Я уже B1. Не будет скучно?</summary><p>Изафет, причастия, косвенная речь, модальность, академическое письмо. Скучно не будет. Будет местами больно, но полезно.</p></details>
+      <details class="rv"><summary>Готовлюсь к экзамену. Поможет?</summary><p>32 блока по экзаменам. A1, A2, B1, B2, C1 — по каждому отдельно.</p></details>
+      <details class="rv"><summary>Переезжаю в Турцию работать</summary><p>36 гайдов по работе. Для тех, кто ищет или уже пашет. Плюс лексика: больница, гостиница, транспорт, дом.</p></details>
+      <details class="rv"><summary>Как оплатить?</summary><p>Кнопка ведёт на страницу продукта на Lava.top. Оплата там.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec" style="padding-top:10px">
+  <div class="wrap">
+    <div class="final rv">
+      <div>
+        <div class="kicker">Последний дательный на сегодня</div>
+        <h2>Alterna'<span class="sx">ya</span> <span class="v">gidiyorum</span></h2>
+        <p class="lead" style="margin-top:10px">«Я иду в Alterna». Видишь буфер y и апостроф? Ты уже читаешь это без подсказки. Хочешь говорить — тогда не молчи.</p>
+        <div class="btns"><a class="btn btn-o js-buy" href="https://app.lava.top/products/2cdbb9f8-e65b-443e-8d2c-4fea4c121e41" target="_blank" rel="noopener">Получить доступ · $30</a></div>
+      </div>
+      <svg class="kedi float" viewBox="0 0 240 250" aria-hidden="true"><use href="#kedi"/></svg>
+      <nav class="links"><a href="#lab">Тренажёр</a><a href="#map">Карта</a><a href="#quiz">Тест</a><a href="#cheat">Шпаргалка</a><a href="#price">Стоимость</a></nav>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Alterna · школа турецкого · Гайд 03: дательный падеж -a / -e</div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="t"><b>Alterna A0 → C1</b><span>128 гайдов · 1716 материалов · $30 навсегда</span></div>
+  <a class="btn btn-o js-buy" href="https://app.lava.top/products/2cdbb9f8-e65b-443e-8d2c-4fea4c121e41" target="_blank" rel="noopener">Взять</a>
+</div>
+
+<script>
+(()=>{
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mark=s=>s.replace(/\{(.*?)\}/g,'<i class="bf">$1</i>').replace(/\[(.*?)\]/g,'<b class="sx">$1</b>').replace(/\((.*?)\)/g,'<b class="ac">$1</b>');
+const plain=s=>s.replace(/[\[\]\{\}\(\)]/g,'');
+
+/* speech */
+let trVoice=null;
+function loadVoices(){ if(!('speechSynthesis' in window))return; trVoice=speechSynthesis.getVoices().find(v=>/^tr/i.test(v.lang))||null; }
+if('speechSynthesis' in window){ loadVoices(); speechSynthesis.onvoiceschanged=loadVoices; }
+function say(text,el){
+  if(!('speechSynthesis' in window))return;
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text); u.lang='tr-TR'; u.rate=.88; if(trVoice)u.voice=trVoice;
+  if(el){ $$('.ex.playing').forEach(x=>x.classList.remove('playing')); el.classList.add('playing'); u.onend=u.onerror=()=>el.classList.remove('playing'); }
+  speechSynthesis.speak(u);
+}
+
+/* examples */
+$$('[data-ex]').forEach(box=>{
+  box.classList.add('exs');
+  box.innerHTML=box.dataset.ex.split(';;').map(r=>{const [tr,ru]=r.split('|');
+    return `<button class="ex" type="button" data-say="${plain(tr).replace(/"/g,'')}"><span><span class="tr">${mark(tr)}</span><span class="ru">${ru}</span></span><span class="spk" aria-hidden="true"><svg width="18" height="18"><use href="#spk"/></svg></span></button>`}).join('');
+});
+document.addEventListener('click',e=>{const b=e.target.closest('.ex'); if(b) say(b.dataset.say,b);});
+$$('.note').forEach(n=>n.innerHTML=n.innerHTML.replace(/[\w'çğıöşüÇĞİÖŞÜ]*\{[^}]*\}\[[^\]]*\]|[\w'çğıöşüÇĞİÖŞÜ]*\[[^\]]*\]/g,m=>mark(m)));
+$$('.bub').forEach(b=>b.innerHTML=mark(b.innerHTML));
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+$$('.rv,#arrowscene').forEach(el=>io.observe(el));
+
+/* count up */
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,to=+el.dataset.count;
+  if(RM){el.textContent=to;return;} const t0=performance.now(),d=1400;
+  const step=t=>{const p=Math.min(1,(t-t0)/d),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=v;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step);}),{threshold:.5});
+$$('[data-count]').forEach(el=>cio.observe(el));
+
+/* progress + header + sticky */
+const prog=$('#prog'),hdr=$('#hdr'),sticky=$('#sticky'),price=$('#price'),hero=$('.hero');
+let priceVisible=false;
+new IntersectionObserver(es=>{priceVisible=es[0].isIntersecting;onScroll();},{threshold:.15}).observe(price);
+function onScroll(){
+  const h=document.documentElement,max=h.scrollHeight-h.clientHeight,y=h.scrollTop;
+  prog.style.transform=`scaleX(${max>0?y/max:0})`;
+  hdr.classList.toggle('stuck',y>10);
+  sticky.classList.toggle('show',y>hero.offsetHeight*1.1 && !priceVisible);
+}
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+/* hero parallax */
+const hv=$('#hvis');
+if(!RM && matchMedia('(hover:hover)').matches){
+  hv.parentElement.addEventListener('pointermove',e=>{const r=hv.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    $$('.box',hv).forEach(b=>{const d=+b.dataset.d;b.style.setProperty('--px',(x*d)+'px');b.style.setProperty('--py',(y*d)+'px');});});
+}
+if(!RM){addEventListener('scroll',()=>{const y=scrollY;if(y>900)return;$$('.box',hv).forEach(b=>b.style.setProperty('--py',(-y*(+b.dataset.d)/140)+'px'));},{passive:true});}
+
+/* ============ LAB ============ */
+const V='aeıioöuü',BACK='aıou';
+const DICT={
+ okul:{ru:'в школу',tr:'школа'}, ev:{ru:'домой',tr:'дом'}, 'göl':{ru:'к озеру',tr:'озеро'}, kitap:{ru:'к книге',tr:'книга'},
+ 'şehir':{ru:'в город',tr:'город',res:'şehre',note:'Исключение: безударная i выпадает. şehir → şehr + e.'},
+ araba:{ru:'к машине',tr:'машина'}, kedi:{ru:'к кошке',tr:'кошка'}, su:{ru:'к воде',tr:'вода'},
+ 'ağaç':{ru:'к дереву',tr:'дерево'}, 'çocuk':{ru:'к ребёнку',tr:'ребёнок'}, renk:{ru:'к цвету',tr:'цвет'},
+ deniz:{ru:'к морю',tr:'море'}, park:{ru:'в парк',tr:'парк'}, sokak:{ru:'на улицу',tr:'улица'}, anne:{ru:'маме',tr:'мама'},
+ 'İstanbul':{ru:'в Стамбул',tr:'Стамбул'}, 'Türkiye':{ru:'в Турцию',tr:'Турция'}, Murat:{ru:'Мурату',tr:'Мурат'},
+ saat:{ru:'к часу',tr:'час',res:'saate',note:'Исключение: слово арабское. Гласная a, а суффикс -e. Такие учим отдельно.'},
+ 'üniversite':{ru:'в университет',tr:'университет'}, kanat:{ru:'к крылу',tr:'крыло',soft:true}
+};
+const CHIPS=['okul','ev','kitap','araba','su','çocuk','renk','şehir','İstanbul','Türkiye','saat','deniz'];
+const lower=s=>s.toLocaleLowerCase('tr-TR');
+function analyze(raw){
+  const word=raw.trim().replace(/[’`]/g,"'").split("'")[0];
+  if(!word) return {err:'Впиши слово.'};
+  if(!/^[a-zA-ZçğıöşüÇĞİÖŞÜâîûÂÎÛ]+$/.test(word)) return {err:'Нужны турецкие буквы. Одно слово, без пробелов.'};
+  const proper=word[0]!==lower(word[0]); const w=lower(word);
+  const letters=[...w]; let lvIdx=-1; for(let i=letters.length-1;i>=0;i--){ if(V.includes(letters[i].replace('â','a').replace('î','i').replace('û','u'))){lvIdx=i;break;} }
+  if(lvIdx<0) return {err:'В слове нет гласной. Турецкий так не умеет.'};
+  const key=Object.keys(DICT).find(k=>lower(k)===w); const d=key?DICT[key]:null;
+  const lv=letters[lvIdx].replace('â','a').replace('î','i').replace('û','u');
+  const hv=BACK.includes(lv)?'a':'e'; let vow=hv, vNote='', sNote='', drop=-1;
+  const last=letters[letters.length-1], endsV=V.includes(last);
+  const vc=letters.filter(c=>V.includes(c)).length;
+  const stem=[...word]; let soft=null; const buffer=endsV?'y':'';
+  if(w==='saat'){ vow='e'; vNote=d.note; }
+  else if(w==='şehir'){ drop=3; sNote=d.note; }
+  else if(!endsV && 'pçtk'.includes(last)){
+    const prev=letters[letters.length-2];
+    if(proper) sNote="Имя собственное: согласную не трогаем. Mehmet → Mehmet'e.";
+    else if(last==='t' && !(d&&d.soft)) sNote='t на конце обычно не смягчаем (hayat → hayata). Но бывают исключения: kanat → kanada.';
+    else if(vc>=2 || (d&&d.soft) || (last==='k'&&prev==='n')){ const map={p:'b','ç':'c',t:'d',k:(prev==='n'?'g':'ğ')}; soft={from:last,to:map[last],i:stem.length-1}; }
+    else sNote='Односложное слово. Обычно не смягчаем: top → topa, at → ata.';
+  }
+  let base=stem.slice(); if(soft) base[soft.i]=soft.to; if(drop>=0) base.splice(drop,1);
+  const baseStr=base.join(''), apo=proper?"'":'';
+  const result=baseStr+apo+buffer+vow;
+  const disp=baseStr+apo+(buffer?`<i class="bf">${buffer}</i>`:'')+`<b class="sx">${vow}</b>`;
+  return {word,w,proper,lvIdx,lv,hv,vow,vNote,sNote,drop,endsV,buffer,soft,stem,result,disp,ru:d?d.ru:'',tr:d?d.tr:'',known:!!d};
+}
+const tilesEl=$('#tiles'),stepsEl=$('#steps'),rbig=$('#rbig'),rtr=$('#rtr'),lerr=$('#lerr');
+let runId=0;
+function run(raw,speak){
+  const a=analyze(raw); const id=++runId; lerr.textContent='';
+  if(a.err){ lerr.textContent=a.err; return; }
+  $$('#chips .chip').forEach(c=>c.classList.toggle('on',lower(c.dataset.w)===a.w));
+  const stepData=[
+    ['Конец слова', a.endsV?`Слово кончается на гласную «${a.stem.at(-1)}».`:`Слово кончается на согласную «${a.stem.at(-1)}».`],
+    ['Последняя гласная', `Последняя гласная — «${a.lv}». ${BACK.includes(a.lv)?'Задняя: a, ı, o, u':'Передняя: e, i, ö, ü'} → суффикс -${a.hv}.${a.vNote?' '+a.vNote:''}`],
+    ['Буфер', a.buffer?'Две гласные подряд нельзя. Вставляем буферную y.':'Буфер не нужен: на конце согласная.'],
+    ['Смягчение', a.soft?`${a.soft.from} перед гласной становится ${a.soft.to}.`:(a.sNote||'Смягчать нечего. Слово остаётся как есть.')],
+    ['Результат', `${a.result}${a.ru?' — '+a.ru:''}`]
+  ];
+  stepsEl.innerHTML=stepData.map((s,i)=>`<div class="step"><span class="n">${i+1}</span><div><b>${s[0]}</b><span>${s[1]}</span></div></div>`).join('');
+  tilesEl.innerHTML=a.stem.map((c,i)=>`<span class="tile" data-i="${i}">${c}</span>`).join('');
+  rbig.innerHTML='&nbsp;'; rtr.innerHTML='&nbsp;';
+  const tiles=$$('.tile',tilesEl), steps=$$('.step',stepsEl), T=RM?0:620;
+  const at=(ms,fn)=>setTimeout(()=>{if(id===runId)fn()},ms);
+  at(0,()=>steps[0].classList.add('on'));
+  at(T,()=>{steps[1].classList.add('on'); tiles[a.lvIdx]&&tiles[a.lvIdx].classList.add('lv');});
+  at(T*2,()=>{steps[2].classList.add('on'); if(a.proper){tilesEl.insertAdjacentHTML('beforeend','<span class="tile apo add">\'</span>');} if(a.buffer) tilesEl.insertAdjacentHTML('beforeend','<span class="tile buf add">y</span>');});
+  at(T*3,()=>{steps[3].classList.add('on'); if(a.soft){const t=tiles[a.soft.i]; t.classList.add('soft'); t.textContent=a.soft.to;} if(a.drop>=0){tiles[a.drop].style.opacity='.15';tiles[a.drop].style.transform='translateY(10px) scale(.7)';}});
+  at(T*4,()=>{steps[4].classList.add('on'); tilesEl.insertAdjacentHTML('beforeend',`<span class="tile suf add">${a.vow}</span>`);
+    rbig.innerHTML=a.disp; rtr.textContent=a.ru?(a.tr+' → '+a.ru):(a.known?'':'проверь по словарю, если слово заимствованное');
+    if(speak) say(a.result);
+  });
+}
+$('#chips').innerHTML=CHIPS.map(w=>`<button class="chip" type="button" data-w="${w}">${w}<small>${DICT[w].tr}</small></button>`).join('');
+$('#chips').addEventListener('click',e=>{const c=e.target.closest('.chip'); if(c){ $('#labin').value=''; run(c.dataset.w,true);} });
+$('#labform').addEventListener('submit',e=>{e.preventDefault(); run($('#labin').value,true); $('#labin').blur();});
+let labStarted=false;
+new IntersectionObserver(es=>{if(es[0].isIntersecting&&!labStarted){labStarted=true;run('kitap');}},{threshold:.35}).observe($('.lab'));
+
+/* ============ GEO TABS ============ */
+const GEO=[
+  {tr:'Ev<b class="sx">e</b> gidiyorum.',ru:'Я иду домой.',arrow:'M165 130 C 215 80, 270 80, 318 128'},
+  {tr:'Ev<b class="sx">de</b>yim.',ru:'Я дома.',arrow:''},
+  {tr:'Ev<b class="sx">den</b> geliyorum.',ru:'Я иду из дома.',arrow:'M300 128 C 255 80, 205 80, 160 130'}
+];
+const walker=$('#walker'),geoArrow=$('#geoArrow');
+function setGeo(k){
+  $$('#geoTabs button').forEach(b=>b.classList.toggle('on',+b.dataset.k===k));
+  const g=GEO[k];
+  const IN='translate(380px,42px) scale(.7)';
+  const from=k===0?'translate(-60px,0)':k===2?IN:null, to=k===0?'translate(20px,0)':k===1?IN:'translate(14px,0)';
+  if(from){walker.style.transition='none';walker.style.transform=from;requestAnimationFrame(()=>requestAnimationFrame(()=>{walker.style.transition='';walker.style.transform=to;}));}
+  else walker.style.transform=to;
+  geoArrow.setAttribute('d',g.arrow);
+  $('#geoTr').innerHTML=g.tr; $('#geoRu').textContent=g.ru;
+  say(plain(g.tr.replace(/<[^>]+>/g,'')));
+}
+$('#geoTabs').addEventListener('click',e=>{const b=e.target.closest('button'); if(b) setGeo(+b.dataset.k);});
+$('#geoTr').innerHTML=GEO[0].tr; $('#geoRu').textContent=GEO[0].ru; walker.style.transform='translate(20px,0)'; geoArrow.setAttribute('d',GEO[0].arrow);
+
+/* ============ FLIPS ============ */
+const PR=[['ben','я','bana','мне'],['sen','ты','sana','тебе'],['o','он / она','ona','ему / ей'],['biz','мы','bize','нам'],['siz','вы','size','вам'],['onlar','они','onlara','им']];
+$('#flips').innerHTML=PR.map(p=>`<button class="flip" type="button" aria-label="${p[0]} → ${p[2]}"><span class="fi"><span class="f"><b>${p[0]}</b><span>${p[1]}</span></span><span class="bk"><b>${p[2]}</b><span>${p[3]}</span></span></span></button>`).join('');
+$('#flips').addEventListener('click',e=>{const f=e.target.closest('.flip'); if(f){f.classList.toggle('on'); if(f.classList.contains('on')) say($('.bk b',f).textContent);}});
+$('#flipall').addEventListener('click',()=>{const all=$$('.flip'),any=all.some(f=>!f.classList.contains('on'));all.forEach((f,i)=>setTimeout(()=>f.classList.toggle('on',any),i*90));});
+
+/* ============ VS ============ */
+const VS=[
+  [{tr:'Çocuğ[a] bakıyorum.',ru:'Я смотрю на ребёнка.',why:'Ребёнок — направление взгляда. Взгляд летит к нему. Дательный.'},
+   {tr:'Çocuğ(u) görüyorum.',ru:'Я вижу ребёнка.',why:'Ребёнок — прямой объект. Ты его просто видишь. Винительный.'}],
+  [{tr:'San[a] güveniyorum.',ru:'Я доверяю тебе.',why:'Güvenmek требует дательный. Доверие направлено к тебе.'},
+   {tr:'Sen(i) seviyorum.',ru:'Я люблю тебя.',why:'Sevmek требует винительный. Скажешь «sana seviyorum» — турок поймёт. Но улыбнётся так, что захочется уехать.'}]
+];
+$$('.vstog').forEach(t=>{const p=+t.dataset.pair,out=t.nextElementSibling;
+  const show=i=>{$$('button',t).forEach(b=>b.classList.toggle('on',+b.dataset.i===i));const d=VS[p][i];
+    out.innerHTML=`<div><div class="tr">${mark(d.tr)}</div><div class="ru">${d.ru}</div><div class="why">${d.why}</div></div>`;};
+  t.addEventListener('click',e=>{const b=e.target.closest('button');if(b){show(+b.dataset.i);say(plain(VS[p][+b.dataset.i].tr));}});show(0);});
+
+/* ============ CHAIN ============ */
+const chain=$('#chain');
+$('#chainBtn').addEventListener('click',()=>{const j=chain.classList.toggle('joined');
+  $('#chainRes').innerHTML=j?'<b>ev<i class="bf">lerimiz</i><b class="sx">e</b></b> — к нашим домам':'Нажми — и состав сцепится';
+  $('#chainBtn').textContent=j?'Расцепить':'Сцепить вагоны'; if(j) say('evlerimize');});
+
+/* ============ CHAT ============ */
+const chatIO=new IntersectionObserver(es=>{if(!es[0].isIntersecting)return;chatIO.disconnect();$$('.bub').forEach((b,i)=>setTimeout(()=>b.classList.add('show'),RM?0:i*650));},{threshold:.3});
+chatIO.observe($('#chat'));
+
+/* ============ LINES ============ */
+$('#lines').addEventListener('click',e=>{const l=e.target.closest('.line');if(!l)return;l.classList.toggle('on');if(l.classList.contains('on'))say($('.t',l).textContent);});
+
+/* ============ MAP ============ */
+const PINS=[
+  {x:18,y:14,k:'Куда · okul',n:'okula',tr:'Okul[a] gidiyorum.',ru:'Я иду в школу.'},
+  {x:40,y:33,k:'Куда · üniversite',n:'Akdeniz',tr:'Üniversite{y}[e] gidiyorum.',ru:'Я иду в университет.'},
+  {x:60,y:50,k:'Кому · kafe',n:'kafe',tr:'Ban[a] bir çay, lütfen.',ru:'Мне чай, пожалуйста.'},
+  {x:81,y:48,k:'Куда · park',n:'parka',tr:'Park[a] gidelim.',ru:'Пойдём в парк.'},
+  {x:22,y:54,k:'Куда · hastane',n:'hastaneye',tr:'Hastane{y}[e] gitmem lazım.',ru:'Мне надо в больницу.'},
+  {x:48,y:68,k:'К чему · deniz',n:'denize',tr:'Deniz[e] bakıyorum.',ru:'Я смотрю на море.'},
+  {x:66,y:12,k:'Куда · havalimanı',n:"İstanbul'a",tr:"İstanbul'[a] uçuyorum.",ru:'Я лечу в Стамбул.'},
+  {x:80,y:31,k:'Куда · ev',n:'eve',tr:'Ev[e] dönüyorum.',ru:'Я возвращаюсь домой.'}
+];
+const pinsEl=$('#pins');
+pinsEl.innerHTML=PINS.map((p,i)=>`<button class="pin" type="button" style="left:${p.x}%;top:${p.y}%" data-i="${i}"><i>+</i>${p.n}</button>`).join('');
+let curPin=0;
+function showPin(i,speak){curPin=i;const p=PINS[i];$$('.pin').forEach(b=>b.classList.toggle('on',+b.dataset.i===i));
+  $('#mck').textContent=p.k;$('#mctr').innerHTML=mark(p.tr);$('#mcru').textContent=p.ru;
+  const c=$('#mapcard');c.classList.remove('flash');void c.offsetWidth;c.classList.add('flash'); if(speak)say(plain(p.tr));}
+pinsEl.addEventListener('click',e=>{const b=e.target.closest('.pin');if(b)showPin(+b.dataset.i,true);});
+$('#mcspk').addEventListener('click',()=>say(plain(PINS[curPin].tr)));
+showPin(1,false);
+
+/* ============ QUIZ ============ */
+const Q=[
+  {ru:'Я иду в университет',a:'Üniversiteye gidiyorum.',o:['Üniversitede gidiyorum.','Üniversiteya gidiyorum.'],
+   w:['-de это «где». Ты уже в универе и идёшь. На месте. Как на беговой дорожке.','Последняя гласная — e. Значит -ye, а не -ya. Гармонию не обманешь.']},
+  {ru:'Я написал другу',a:'Arkadaşıma yazdım.',o:['Arkadaşımı yazdım.','Arkadaşımda yazdım.'],
+   w:['Это винительный. Получилось «я написал друга». Как портрет. Маслом.','-da это «где». «Я написал у друга». Может, и было. Но не то.']},
+  {ru:'Она помогает маме',a:'Annesine yardım ediyor.',o:['Annesini yardım ediyor.','Annesiye yardım ediyor.'],
+   w:['Yardım etmek требует дательный. Помогают кому, а не кого.','После «его / её» (annesi) нужен буфер n, а не y: annesine.']},
+  {ru:'Мы смотрим на море',a:'Denize bakıyoruz.',o:['Denizi bakıyoruz.','Denizde bakıyoruz.'],
+   w:['Bakmak любит дательный. Взгляд летит к морю.','«Мы смотрим в море», будто сидим на дне. Нужен -e.']},
+  {ru:'Он возвращается домой',a:'Eve dönüyor.',o:['Evde dönüyor.','Evden dönüyor.'],
+   w:['Это «крутится дома». Звучит как вечер пятницы, но не то.','Evden — «из дома». Он как раз уходит. Обратное направление.']},
+  {ru:'Я доверяю этому человеку',a:'Bu insana güveniyorum.',o:['Bu insanı güveniyorum.','Bu insanda güveniyorum.'],
+   w:['Güvenmek требует дательный. Доверие направлено к человеку.','-da это «где». Доверие не живёт внутри человека. Оно к нему летит.']},
+  {ru:'Вы идёте в парк',a:'Parka gidiyorsunuz.',o:['Parke gidiyorsunuz.','Parkta gidiyorsunuz.'],
+   w:['Гласная a — задняя. Значит -a. Parke звучит как пол из дерева.','Parkta — «в парке». Вы уже там. Идти некуда.']}
+];
+let qi=0,score=0;const qb=$('#quizbox');
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a;};
+function renderQ(){
+  if(qi>=Q.length) return renderDone();
+  const q=Q[qi], opts=shuffle([{t:q.a,ok:true},...q.o.map((t,i)=>({t,ok:false,w:q.w[i]}))]);
+  qb.innerHTML=`<div class="qtop"><span>Вопрос ${qi+1} из ${Q.length}</span><span>✓ ${score}</span></div><div class="qbar"><i style="width:${qi/Q.length*100}%"></i></div>
+   <div class="qq">Как сказать по-турецки:</div><div class="qru">${q.ru}</div>
+   <div class="opts">${opts.map((o,i)=>`<button class="opt" type="button" data-i="${i}">${o.t}</button>`).join('')}</div><div class="fb"></div>`;
+  $$('.opt',qb).forEach(b=>b.addEventListener('click',()=>{
+    const o=opts[+b.dataset.i], fb=$('.fb',qb);
+    $$('.opt',qb).forEach((x,i)=>{x.disabled=true; if(opts[i].ok)x.classList.add('ok');});
+    if(o.ok){score++;fb.className='fb show ok';fb.innerHTML='<b>Точно.</b> '+['Суффикс на месте.','Стрелка летит куда надо.','Турок бы кивнул.','Чисто.','Так и говорят.','Грамматика на месте.','Красиво.'][qi%7];}
+    else{b.classList.add('no');fb.className='fb show no';fb.innerHTML='<b>Мимо.</b> '+o.w;}
+    say(q.a);
+    fb.insertAdjacentHTML('afterend',`<button class="btn btn-o qnext" type="button">${qi<Q.length-1?'Дальше':'Результат'}</button>`);
+    $('.qnext',qb).addEventListener('click',()=>{qi++;renderQ();qb.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'});});
+  }));
+}
+function renderDone(){
+  const msg=score===7?'Семь из семи. Ты только что сделал то, что в Alterna делают каждый день. Только там таких гайдов 128.':score>=5?'Почти идеально. Пара промахов — это нормально. Промахи и есть обучение.':'Не страшно. Вернись к тренажёру, прогони пару слов и попробуй снова. Турецкий не торопится.';
+  qb.innerHTML=`<div class="qdone"><div class="score">${score}<small> / ${Q.length}</small></div><p class="lead" style="margin:14px auto 0">${msg}</p>
+  <div class="btns" style="justify-content:center"><button class="btn btn-w" type="button" id="qagain" style="flex:0 1 200px">Пройти заново</button><a class="btn btn-o" href="#alterna" style="flex:0 1 260px">Что дальше →</a></div></div>`;
+  $('#qagain').addEventListener('click',()=>{qi=0;score=0;renderQ();});
+  if(score>=5) confetti();
+}
+renderQ();
+
+/* confetti */
+function confetti(){
+  if(RM)return; const c=$('#confetti'),x=c.getContext('2d'); c.width=innerWidth*devicePixelRatio;c.height=innerHeight*devicePixelRatio;x.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+  const cols=['#ff3b55','#8a5cff','#ff8330','#3fd6c4','#ffd23f','#b56cff'];
+  const P=Array.from({length:140},()=>({x:innerWidth/2,y:innerHeight*.45,vx:(Math.random()-.5)*14,vy:-Math.random()*14-4,r:Math.random()*7+4,c:cols[Math.random()*cols.length|0],a:Math.random()*6,s:(Math.random()-.5)*.3}));
+  let f=0;(function tick(){x.clearRect(0,0,innerWidth,innerHeight);P.forEach(p=>{p.vy+=.35;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.a+=p.s;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;x.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);x.restore();});
+    if(++f<170)requestAnimationFrame(tick);else x.clearRect(0,0,innerWidth,innerHeight);})();
+}
+
+/* copy cheat */
+$('#copyCheat').addEventListener('click',async e=>{
+  const t='Дательный падеж -a / -e\nкому, куда, к чему\neve — домой\nokula — в школу\nsana — тебе\nanneme — моей маме\nbu fikre — с этой идеей\nçocuğa bakıyorum — смотрю на ребёнка\nçocuğu görüyorum — вижу ребёнка\n\nЕсли действие движется к человеку, месту, предмету или идее — нужен дательный.\n\nГайд 03 · Alterna A0 → C1';
+  try{await navigator.clipboard.writeText(t);e.target.textContent='Скопировано ✓';}catch(_){e.target.textContent='Выдели текст и скопируй вручную';}
+  setTimeout(()=>e.target.textContent='Скопировать шпаргалку',2200);
+});
+
+/* dots 128 */
+$('#dots').innerHTML=Array.from({length:128},(_,i)=>`<i${i===0?' class="done"':''}></i>`).join('');
+
+/* level picker */
+const LV=[
+  {h:'Старт с нуля',li:['Алфавит и звуки: 29 букв, шесть незнакомых — ç, ğ, ı, ö, ş, ü','Гармония гласных — главное правило языка','Первые падежи. Такие же разборы, как этот','Мультики с медленной речью вместо сериалов']},
+  {h:'Строим базу',li:['Все шесть падежей, времена, отрицание, будущее -acak / -ecek','Лексика по темам: еда, транспорт, больница, гостиница, дом','Экзаменационные блоки A1 и A2','План на неделю: пять видео под твой уровень']},
+  {h:'Выход в живой язык',li:['Изафет, причастия, деепричастия, косвенная речь','Условное и желательное наклонения, пассив','Подкасты и книги вместо учебника','Экзаменационные блоки B1 и B2']},
+  {h:'Шлифовка',li:['Модальность, стилистика, официальный и разговорный стиль','Академическое и деловое письмо, связность текста','Классика в оригинале из книжной полки','Экзаменационный блок C1 и гайды по работе']}
+];
+function setLv(k){$$('#lvlTabs button').forEach(b=>b.classList.toggle('on',+b.dataset.k===k));const l=LV[k];
+  $('#lvlOut').innerHTML=`<div><b style="font-size:16px">${l.h}</b><ul class="chk red" style="margin-top:12px">${l.li.map(x=>`<li><span>${x}</span></li>`).join('')}</ul></div>`;}
+$('#lvlTabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)setLv(+b.dataset.k);});setLv(0);
+
+/* phones dots */
+const ph=$('#phones'),phs=$$('.phone',ph),pd=$('#pdots');
+pd.innerHTML=phs.map(()=>'<i></i>').join('');
+const updDots=()=>{const c=ph.scrollLeft+ph.clientWidth/2;let best=0,bd=1e9;phs.forEach((p,i)=>{const d=Math.abs(p.offsetLeft+p.offsetWidth/2-c);if(d<bd){bd=d;best=i}});$$('i',pd).forEach((d,i)=>d.classList.toggle('on',i===best));};
+ph.addEventListener('scroll',updDots,{passive:true});updDots();
+
+/* videos */
+const VIDS=[
+  {k:'v_consonant',t:'Тренажёр смягчения',bar:'Ünsüz Yumuşaması · тренажёр',cap:'Вписываешь слово и окончание — схема показывает, смягчится ли согласная. Как тренажёр выше, только на весь язык.'},
+  {k:'v_buffer',t:'Буферные буквы',bar:'Kaynaştırma · y, n, s',cap:'Конструктор форм и тест: какой буфер нужен. С видео, где это объясняют сами турки.'},
+  {k:'v_apps',t:'Каталог приложений',bar:'Alterna Uygulama · 143 сервиса',cap:'Фильтры по уровню, задаче и цене. Что брать на A1, а что — на B2.'},
+  {k:'v_cizgi',t:'Мультики',bar:'Alterna Çizgi · 138 мультфильмов',cap:'Каталог мультфильмов по уровням: дубляж, полный метр, сериалы для самых маленьких.'},
+  {k:'v_podcast',t:'Подкасты',bar:'Alterna Podcasts',cap:'Подкасты по уровням и инструкция, как слушать, чтобы это работало.'}
+];
+const vid=$('#vid'),vt=$('#vtabs');
+vt.innerHTML=VIDS.map((v,i)=>`<button class="chip${i?'':' on'}" type="button" data-i="${i}">${v.t}</button>`).join('');
+let vInView=false;
+function setVid(i){const v=VIDS[i];$$('.chip',vt).forEach((c,j)=>c.classList.toggle('on',j===i));vid.poster=`media/${v.k}.webp`;vid.src=`media/${v.k}.mp4`;$('#vbar').textContent=v.bar;$('#vcap').textContent=v.cap;if(vInView&&!RM)vid.play().catch(()=>{});}
+vt.addEventListener('click',e=>{const c=e.target.closest('.chip');if(c)setVid(+c.dataset.i);});
+vid.poster='media/'+VIDS[0].k+'.webp';$('#vbar').textContent=VIDS[0].bar;$('#vcap').textContent=VIDS[0].cap;
+new IntersectionObserver(es=>{vInView=es[0].isIntersecting;if(vInView){if(!vid.src)vid.src='media/'+VIDS[0].k+'.mp4';if(!RM)vid.play().catch(()=>{});}else vid.pause();},{threshold:.4}).observe(vid);
+
+/* time calc */
+const mins=$('#mins');
+function calc(){const m=+mins.value,h=Math.round(1716*m/60),d=Math.round(h/8);
+  $('#minsv').textContent=m+' мин';$('#hrs').textContent=h;$('#days').textContent=d;
+  $('#punch').innerHTML=d>=10?`Это <b>${d} рабочих дней</b> только на поиск. Не на учёбу. На поиск. В Alterna это время уже потрачено за тебя.`:`Даже так — <b>${h} часов</b> жизни. На ютубе. Между «Learn Turkish in 5 minutes» и рекламой VPN.`;}
+mins.addEventListener('input',calc);calc();
+})();
+</script>
+</body>
+</html>
